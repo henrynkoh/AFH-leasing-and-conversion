@@ -10,10 +10,10 @@ export default function TimelinePage() {
       phase: 'Phase 1: Planning & Permits (Days 1-15)',
       days: 15,
       activities: [
-        { day: '1-3', activity: 'Research WABO requirements, obtain permit checklist', cost: 0, landlord: 100, tenant: 0 },
-        { day: '4-7', activity: 'Hire architect/engineer for compliance drawings', cost: 2000, landlord: 100, tenant: 0 },
-        { day: '8-12', activity: 'Submit permit applications (WABO, building, fire)', cost: 1500, landlord: 100, tenant: 0 },
-        { day: '13-15', activity: 'Obtain contractor bids (3-5 contractors)', cost: 0, landlord: 100, tenant: 0 }
+        { day: '1-3', activity: 'Research WABO requirements thoroughly - Contact local building department for complete WABO permit checklist, review Washington State AFH regulations and building codes, identify all required modifications and compliance items, research local permit processing times and requirements, gather information on inspection schedules, review similar AFH conversion projects in area, create comprehensive requirements checklist, identify potential challenges early, establish relationships with permit office staff, understand cost implications of each requirement', cost: 0, landlord: 100, tenant: 0 },
+        { day: '4-7', activity: 'Hire architect/engineer for compliance drawings - Research and identify 3-5 qualified architects/engineers with AFH experience, review portfolios and past AFH projects, check references and licenses, obtain detailed quotes for compliance drawings, interview candidates to assess understanding of AFH requirements, verify experience with WABO permits and ADA compliance, negotiate scope of work and pricing, select best candidate based on experience and cost, sign contract with selected professional, provide property access for measurements and assessment, establish communication schedule and deliverables timeline', cost: 2000, landlord: 100, tenant: 0 },
+        { day: '8-12', activity: 'Submit permit applications (WABO, building, fire) - Complete WABO permit application with all required documentation including floor plans and compliance drawings, complete building permit application with structural and modification details, complete fire department permit application with safety system information, gather all supporting documents (property deeds, insurance, contractor information), pay all permit fees ($1,500 total), submit applications to respective departments, obtain receipt and tracking numbers, schedule any required pre-application meetings, follow up on application status, address any initial questions or requests for additional information', cost: 1500, landlord: 100, tenant: 0 },
+        { day: '13-15', activity: 'Obtain contractor bids (3-5 contractors) - Identify 5-7 qualified contractors with AFH/conversion experience, verify licenses and insurance for each contractor, provide detailed scope of work and specifications to all contractors, schedule site visits for all contractors to assess property, allow adequate time for contractors to prepare detailed bids, request itemized bids showing labor and materials, request timeline estimates from each contractor, request references from past AFH or similar projects, establish bid deadline and submission requirements, review initial bids for completeness and competitiveness', cost: 0, landlord: 100, tenant: 0 }
       ]
     },
     {
@@ -29,10 +29,10 @@ export default function TimelinePage() {
       phase: 'Phase 3: Construction - Bathrooms (Days 26-50)',
       days: 25,
       activities: [
-        { day: '26-30', activity: 'Demolition of existing bathroom fixtures', cost: 1500, landlord: 70, tenant: 30 },
-        { day: '31-40', activity: 'Install ADA-compliant toilets, grab bars, roll-in showers', cost: 12000, landlord: 70, tenant: 30 },
+        { day: '26-30', activity: 'Demolition of existing bathroom fixtures - Remove existing toilets, vanities, and fixtures carefully to avoid damage to plumbing, remove existing tubs/showers and associated fixtures, dispose of materials properly according to local regulations, prepare surfaces for new installations, protect surrounding areas from damage during demolition, coordinate with plumbing contractor for proper shutoffs, ensure proper disposal of hazardous materials if any, clean and prepare work area for new installations, verify structural integrity after demolition, document any unexpected conditions discovered during demolition', cost: 1500, landlord: 70, tenant: 30 },
+        { day: '31-40', activity: 'Install ADA-compliant toilets, grab bars, roll-in showers - Install ADA-compliant toilets at proper height (17-19 inches) with adequate clearance (60-inch turning radius), install grab bars at toilet (side and rear, 33-36 inches high, properly anchored to studs), install grab bars in shower/tub area (horizontal and vertical bars, properly positioned), convert to roll-in shower capability (36x36 inch minimum, no threshold, proper slope for drainage), install accessible vanities with knee clearance (27 inches high, 30 inches wide, 19 inches deep), ensure all fixtures meet ADA requirements and local codes, verify proper installation and anchoring of all safety features, test all fixtures for proper operation, coordinate with plumbing inspector for rough-in inspection', cost: 12000, landlord: 70, tenant: 30 },
         { day: '41-45', activity: 'Install non-slip flooring, adequate lighting', cost: 3000, landlord: 70, tenant: 30 },
-        { day: '46-50', activity: 'Bathroom inspections and corrections', cost: 500, landlord: 70, tenant: 30 }
+        { day: '46-50', activity: 'Bathroom inspections and corrections - Schedule plumbing inspection with local building department, schedule accessibility inspection if required, accompany inspector during inspections, address any corrections identified during inspections promptly, verify all corrections meet inspector requirements, schedule reinspection if needed, obtain final inspection approvals, document all inspections and approvals, ensure all work meets WABO and ADA requirements, prepare bathrooms for final use', cost: 500, landlord: 70, tenant: 30 }
       ]
     },
     {
@@ -260,10 +260,31 @@ export default function TimelinePage() {
         <div className="mt-8 bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg">
           <h3 className="font-semibold text-lg mb-2">Cost-Sharing Rationale</h3>
           <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
-            <li><strong>Landlord pays 100%:</strong> Permits, inspections, initial design/planning (these add permanent value to property)</li>
-            <li><strong>Landlord pays 70-80%:</strong> Construction and modifications (major improvements that benefit property long-term)</li>
-            <li><strong>Tenant pays 20-30%:</strong> Operational improvements and tenant-specific customizations</li>
-            <li><strong>Shared 50/50:</strong> Contract negotiations and lease finalization (mutual benefit)</li>
+            <li><strong>Landlord pays 100%:</strong> Permits, inspections, initial design/planning (these add permanent value to property and are landlord's responsibility for property improvements)</li>
+            <li><strong>Landlord pays 70-80%:</strong> Construction and modifications (major improvements that benefit property long-term, increase property value, and are required for AFH operation)</li>
+            <li><strong>Tenant pays 20-30%:</strong> Operational improvements and tenant-specific customizations (items that benefit tenant operations directly and may be customized to their needs)</li>
+            <li><strong>Shared 50/50:</strong> Contract negotiations and lease finalization (mutual benefit activities where both parties have equal interest in successful outcome)</li>
+          </ul>
+          <div className="mt-4 p-3 bg-white rounded border">
+            <h4 className="font-semibold mb-2">Additional Cost Considerations:</h4>
+            <ul className="list-disc list-inside space-y-1 text-xs text-gray-700">
+              <li><strong>Contingency Budget:</strong> Add 10-15% buffer for unexpected costs, delays, or changes</li>
+              <li><strong>Permit Delays:</strong> Budget extra time (2-4 weeks) for permit processing, especially during busy periods</li>
+              <li><strong>Inspection Corrections:</strong> Plan for 5-10% additional cost for addressing inspection findings</li>
+              <li><strong>Material Cost Fluctuations:</strong> Prices may vary, consider locking in prices with contractors</li>
+              <li><strong>Timeline Buffer:</strong> Add 10-15% extra time to account for weather, delays, or coordination issues</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-6 bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg">
+          <h3 className="font-semibold text-lg mb-2">Timeline Management Tips</h3>
+          <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
+            <li><strong>Start Early:</strong> Begin permit process as soon as possible to avoid delays</li>
+            <li><strong>Coordinate Closely:</strong> Regular communication with contractors and inspectors prevents delays</li>
+            <li><strong>Plan for Contingencies:</strong> Build buffer time into each phase for unexpected issues</li>
+            <li><strong>Parallel Activities:</strong> Some activities can run simultaneously (e.g., marketing while construction completes)</li>
+            <li><strong>Regular Updates:</strong> Weekly progress meetings help identify and address issues early</li>
+            <li><strong>Document Everything:</strong> Keep detailed records of all activities, costs, and decisions</li>
           </ul>
         </div>
       </div>
