@@ -288,30 +288,63 @@ export default function ProvidersPage() {
           {/* Action Plan */}
           <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg">
             <h3 className="text-xl font-bold mb-4">30-Day Provider Search Action Plan</h3>
-            <div className="space-y-3 text-sm">
+            <div className="space-y-4 text-sm">
               <div className="flex items-start gap-3">
                 <span className="bg-yellow-500 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold flex-shrink-0">1</span>
                 <div>
-                  <strong>Week 1:</strong> Join Facebook AFH groups, list on AFH locator websites, create marketing materials
+                  <strong>Week 1:</strong> Join Facebook AFH groups (request access to 3-5 groups), list on AFH locator websites (create comprehensive listings), create marketing materials (photos, floor plan, descriptions), set up tracking spreadsheet for all inquiries, research local AFH providers in area, identify top 10-15 target providers
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <span className="bg-yellow-500 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold flex-shrink-0">2</span>
                 <div>
-                  <strong>Week 2:</strong> Post property listings, start direct outreach to 10-15 providers in area
+                  <strong>Week 2:</strong> Post property listings on all channels (Facebook groups, AFH locator, commercial sites), start direct outreach to 10-15 providers in area (phone calls and emails), respond to all inquiries within 24 hours, schedule initial property viewings, begin screening process for interested providers
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <span className="bg-yellow-500 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold flex-shrink-0">3</span>
                 <div>
-                  <strong>Week 3:</strong> Follow up on inquiries, conduct property tours, screen interested providers
+                  <strong>Week 3:</strong> Follow up on all inquiries (second contact for non-responders), conduct property tours with interested providers (schedule 3-5 tours), screen interested providers using comprehensive questionnaire, check references for top candidates, verify licenses and credentials, evaluate financial stability
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <span className="bg-yellow-500 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold flex-shrink-0">4</span>
                 <div>
-                  <strong>Week 4:</strong> Negotiate terms with qualified providers, finalize lease agreements
+                  <strong>Week 4:</strong> Negotiate terms with qualified providers (top 2-3 candidates), finalize lease agreements with selected provider, coordinate legal review of lease documents, execute lease agreement, begin lease term and property handover
                 </div>
+              </div>
+            </div>
+            <div className="mt-4 p-3 bg-white rounded border">
+              <h4 className="font-semibold mb-2">Extended Timeline (60-90 days):</h4>
+              <div className="text-xs text-gray-700 space-y-1">
+                <div><strong>Days 31-45:</strong> Continue marketing if no provider selected, expand search radius, consider additional channels</div>
+                <div><strong>Days 46-60:</strong> Re-evaluate marketing approach, adjust pricing or terms if needed, consider conversion options</div>
+                <div><strong>Days 61-90:</strong> Final provider selection, complete all negotiations, execute lease</div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-6 bg-purple-50 border-l-4 border-purple-500 p-6 rounded-lg">
+            <h3 className="text-xl font-bold mb-4">Provider Relationship Management</h3>
+            <div className="space-y-3 text-sm text-gray-700">
+              <div>
+                <h4 className="font-semibold mb-2">Building Relationships:</h4>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Be responsive and professional in all communications</li>
+                  <li>Show genuine interest in provider's business success</li>
+                  <li>Be flexible and willing to work together on solutions</li>
+                  <li>Maintain regular communication throughout process</li>
+                  <li>Provide value beyond just property (market insights, connections)</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2">Long-Term Partnership:</h4>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>View relationship as long-term partnership, not just transaction</li>
+                  <li>Support provider's success - their success is your success</li>
+                  <li>Maintain open communication after lease execution</li>
+                  <li>Be available for questions and support</li>
+                  <li>Consider renewal incentives for good tenants</li>
+                </ul>
               </div>
             </div>
           </div>

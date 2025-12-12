@@ -347,16 +347,76 @@ FOLLOW-UP:
           {/* Best Practices */}
           <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg">
             <h3 className="text-xl font-bold mb-4">Marketing Best Practices</h3>
-            <ul className="list-disc list-inside space-y-2 text-gray-700">
-              <li><strong>Be specific:</strong> Include floor plan, photos, and detailed property information</li>
-              <li><strong>Highlight flexibility:</strong> Emphasize willingness to work with providers on terms</li>
-              <li><strong>Respond quickly:</strong> AFH providers are often actively searching and move fast</li>
-              <li><strong>Use multiple channels:</strong> Don't rely on just one platform - cast a wide net</li>
-              <li><strong>Show floor plan:</strong> Visual representation helps providers envision the space</li>
-              <li><strong>Emphasize location:</strong> Centralia is a growing AFH market with good demographics</li>
-              <li><strong>Be transparent:</strong> Clearly state conversion status and what's needed</li>
-              <li><strong>Follow up:</strong> Reach out to interested parties within 24-48 hours</li>
-            </ul>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-semibold mb-2">Content Strategy</h4>
+                <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
+                  <li><strong>Be specific:</strong> Include floor plan, photos, and detailed property information - providers need complete information to make decisions</li>
+                  <li><strong>Highlight flexibility:</strong> Emphasize willingness to work with providers on terms - flexibility is a key differentiator</li>
+                  <li><strong>Show floor plan:</strong> Visual representation helps providers envision the space and understand layout immediately</li>
+                  <li><strong>Emphasize location:</strong> Centralia is a growing AFH market with good demographics - highlight market advantages</li>
+                  <li><strong>Be transparent:</strong> Clearly state conversion status and what's needed - honesty builds trust</li>
+                  <li><strong>Include cost information:</strong> Provide cost estimates and cost-sharing details - helps providers plan</li>
+                  <li><strong>Show timeline:</strong> Include conversion timeline if applicable - helps providers plan operations</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2">Response Strategy</h4>
+                <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
+                  <li><strong>Respond quickly:</strong> AFH providers are often actively searching and move fast - respond within 2-4 hours if possible</li>
+                  <li><strong>Follow up:</strong> Reach out to interested parties within 24-48 hours - don't let leads go cold</li>
+                  <li><strong>Personalize responses:</strong> Customize each response based on provider's specific situation and needs</li>
+                  <li><strong>Provide value:</strong> Each communication should provide useful information, not just sales pitch</li>
+                  <li><strong>Track interactions:</strong> Keep notes on all provider interactions to personalize future communications</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2">Multi-Channel Approach</h4>
+                <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
+                  <li><strong>Use multiple channels:</strong> Don't rely on just one platform - cast a wide net across all available channels</li>
+                  <li><strong>Consistent messaging:</strong> Maintain consistent property description and key points across all channels</li>
+                  <li><strong>Channel-specific optimization:</strong> Adapt content format for each platform while maintaining core message</li>
+                  <li><strong>Cross-promote:</strong> Mention other channels where property is listed to increase visibility</li>
+                  <li><strong>Track performance:</strong> Monitor which channels generate most inquiries and focus efforts there</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2">Professional Presentation</h4>
+                <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
+                  <li><strong>High-quality photos:</strong> Professional photography makes significant difference in attracting providers</li>
+                  <li><strong>Clear floor plans:</strong> Easy-to-read floor plans help providers understand property layout</li>
+                  <li><strong>Professional writing:</strong> Well-written descriptions show professionalism and attention to detail</li>
+                  <li><strong>Complete information:</strong> Provide all necessary information upfront to avoid back-and-forth</li>
+                  <li><strong>Organized materials:</strong> Well-organized marketing materials make good impression</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="mt-6 bg-green-50 border-l-4 border-green-500 p-6 rounded-lg">
+            <h3 className="text-xl font-bold mb-4">Marketing Metrics & Tracking</h3>
+            <div className="space-y-3 text-sm text-gray-700">
+              <div>
+                <h4 className="font-semibold mb-2">Key Metrics to Track:</h4>
+                <ul className="list-disc list-inside space-y-1">
+                  <li><strong>Inquiry Rate:</strong> Number of inquiries per listing/channel</li>
+                  <li><strong>Response Rate:</strong> Percentage of inquiries that respond to follow-up</li>
+                  <li><strong>Viewing Rate:</strong> Percentage of inquiries that schedule property viewings</li>
+                  <li><strong>Conversion Rate:</strong> Percentage of viewings that result in lease applications</li>
+                  <li><strong>Time to Lease:</strong> Average days from first listing to lease execution</li>
+                  <li><strong>Cost per Lead:</strong> Marketing costs divided by number of qualified leads</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2">Tracking Methods:</h4>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Use unique contact methods for each channel (different email, phone extension)</li>
+                  <li>Ask providers how they found the property during initial contact</li>
+                  <li>Track all inquiries in spreadsheet with source, date, and status</li>
+                  <li>Monitor social media engagement (likes, shares, comments)</li>
+                  <li>Track website analytics if using property website</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
