@@ -14,9 +14,9 @@ export default function FloorPlanPage() {
       cost: '$2,000-$3,000',
       dimensions: 'Approximately 200-250 sq ft',
       timeline: '3-5 days for modifications',
-      waboRequirements: 'Meets minimum 80 sq ft requirement, needs handrails and call system for full compliance',
+      waboRequirements: 'Meets minimum 80 sq ft requirement for private single room (code-regulated), needs handrails and call system for full compliance. Market preference: Private single rooms are preferred over shared rooms.',
       accessibility: 'Good - Large space allows for wheelchair access, may need minor adjustments',
-      notes: 'This is the largest bedroom, ideal for resident who may need more space for equipment or mobility aids. Location near primary bathroom is advantageous.'
+      notes: 'PRIVATE SINGLE ROOM (80 sq ft minimum required). This is the largest bedroom, ideal for private single room occupancy. Current market trend: New residents strongly prefer private single rooms over shared rooms. Location near primary bathroom is advantageous.'
     },
     'bedroom-1': {
       name: 'Bedroom 1',
@@ -26,9 +26,9 @@ export default function FloorPlanPage() {
       cost: '$1,500-$2,000',
       dimensions: 'Approximately 120-150 sq ft',
       timeline: '2-4 days for modifications',
-      waboRequirements: 'Meets minimum 80 sq ft requirement, needs handrails and call system',
-      accessibility: 'Good - Standard size suitable for resident room',
-      notes: 'Standard bedroom size, suitable for most residents. Location provides good access to common areas and bathroom.'
+      waboRequirements: 'Meets minimum 80 sq ft requirement for private single room (code-regulated). Market preference: Private single rooms required. Needs handrails and call system.',
+      accessibility: 'Good - Standard size suitable for private single resident room',
+      notes: 'PRIVATE SINGLE ROOM (80 sq ft minimum required). Standard bedroom size meets code requirements for private single room. Current market: All residents prefer private single rooms. Location provides good access to common areas and bathroom.'
     },
     'bedroom-2': {
       name: 'Bedroom 2',
@@ -50,9 +50,9 @@ export default function FloorPlanPage() {
       cost: '$1,500-$2,000 (if resident room), $500-$1,000 (if office/staff room)',
       dimensions: 'Approximately 100-150 sq ft',
       timeline: '2-4 days (resident room), 1-2 days (office/staff room)',
-      waboRequirements: 'If resident room: Must meet 80 sq ft minimum, needs handrails and call system. If office/staff room: Minimal requirements',
+      waboRequirements: 'If resident room: Must meet 80 sq ft minimum for private single room (code-regulated). Market requirement: Private single rooms only, no shared rooms. Needs handrails and call system. If office/staff room: Minimal requirements',
       accessibility: 'Good - Flexible space can accommodate multiple uses',
-      notes: 'Den/office space offers flexibility - can serve as additional resident room (Bed 4) for 4-bed capacity, or dedicated administrative/staff space. Decision depends on operational needs and capacity goals. Has vaulted ceilings and good natural light.'
+      notes: 'PRIVATE SINGLE ROOM OPTION (80 sq ft minimum if converted). Den/office space can serve as additional private single resident room (Bed 4) if it meets 80 sq ft minimum. IMPORTANT: Current market preference requires private single rooms only - shared/double rooms (120 sq ft minimum) are not preferred by new residents. Decision: Convert to private single room OR keep as administrative/staff space. Has vaulted ceilings and good natural light.'
     },
     'primary-bath': {
       name: 'Primary Bathroom (Bath Off Primary)',
@@ -259,17 +259,20 @@ export default function FloorPlanPage() {
       'Handrails needed throughout resident rooms and common areas',
       'Emergency call systems needed in all resident rooms',
       'Patio requires ramp installation for accessibility',
-      'Capacity limited to 3-4 beds (not 5-6) due to 2,100 sq ft size',
-      'Den/office conversion to resident room would reduce administrative space',
-      'Single-level design is good but may limit expansion options'
+      'Capacity limited by private single room requirement: Each room must be minimum 80 sq ft for private single room (code-regulated). Shared/double rooms (120 sq ft minimum) are not preferred by current market.',
+      'All resident rooms must be private single rooms - market preference strongly favors private rooms over shared rooms',
+      'Den/office conversion to private single resident room requires 80 sq ft minimum and would reduce administrative space',
+      'Single-level design is good but room size constraints limit expansion options for private single rooms'
     ],
     compliancePriorities: [
       'Bathroom modifications (highest priority - $10,000-$16,000)',
-      'Emergency call systems in all resident rooms ($3,000)',
+      'Ensure all resident rooms meet 80 sq ft minimum for private single rooms (code-regulated)',
+      'Emergency call systems in all private single resident rooms ($3,000)',
       'Handrail installation throughout ($4,000-$6,000)',
       'Kitchen accessibility improvements ($3,000-$5,000)',
       'Patio ramp and accessibility ($3,000-$5,000)',
-      'Lighting improvements throughout ($1,000-$2,000)'
+      'Lighting improvements throughout ($1,000-$2,000)',
+      'Verify no shared/double rooms - all rooms must be private single rooms per market preference'
     ],
     timelineEstimate: '60-90 days for minimal conversion, 90-120 days for full conversion',
     permitRequirements: [
@@ -277,8 +280,16 @@ export default function FloorPlanPage() {
       'Building permit for structural modifications',
       'Fire department permit and inspection',
       'Electrical permit if major electrical work',
-      'Plumbing permit for bathroom modifications'
-    ]
+      'Plumbing permit for bathroom modifications',
+      'Code compliance: All resident rooms must meet 80 sq ft minimum for private single rooms',
+      'Market requirement: Private single rooms only - shared/double rooms (120 sq ft minimum) not preferred by current residents'
+    ],
+    roomSizeRequirements: {
+      privateSingleRoom: '80 sq ft minimum (code-regulated) - REQUIRED for all resident rooms',
+      sharedDoubleRoom: '120 sq ft minimum (code-regulated) - NOT PREFERRED by current market',
+      marketPreference: 'All new residents prefer private single rooms. Shared/double rooms are not in demand.',
+      note: 'All conversion plans must prioritize private single rooms (80 sq ft minimum each) over shared room configurations.'
+    }
   };
 
   return (
@@ -559,6 +570,25 @@ export default function FloorPlanPage() {
                   <div className="font-semibold">{afhAnalysis.bathrooms} (need modifications)</div>
                   <div className="text-xs text-gray-500 mt-1">Total: {afhAnalysis.bathroomTotal}</div>
                 </div>
+                {afhAnalysis.roomSizeRequirements && (
+                  <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-lg mt-4">
+                    <h4 className="font-semibold text-lg mb-3 text-yellow-800">Room Size Requirements (Code-Regulated)</h4>
+                    <div className="space-y-2 text-sm">
+                      <div>
+                        <strong className="text-green-700">Private Single Room:</strong> {afhAnalysis.roomSizeRequirements.privateSingleRoom}
+                      </div>
+                      <div>
+                        <strong className="text-gray-600">Shared Double Room:</strong> {afhAnalysis.roomSizeRequirements.sharedDoubleRoom}
+                      </div>
+                      <div className="mt-3 p-2 bg-white rounded border">
+                        <strong className="text-blue-700">Market Preference:</strong> {afhAnalysis.roomSizeRequirements.marketPreference}
+                      </div>
+                      <div className="mt-2 text-xs text-gray-600 italic">
+                        {afhAnalysis.roomSizeRequirements.note}
+                      </div>
+                    </div>
+                  </div>
+                )}
                 <div>
                   <div className="text-sm text-gray-600 font-semibold mb-1">Total Square Footage</div>
                   <div className="font-semibold">{afhAnalysis.totalSquareFootage}</div>

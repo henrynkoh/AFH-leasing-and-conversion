@@ -137,7 +137,7 @@ export default function ScenariosPage() {
       budget: "$50,000 - $70,000",
       landlordShare: "70-80%",
       tenantShare: "20-30%",
-      conversionDetails: "Convert bonus room to 3 resident rooms, optimize all space for maximum capacity, create dedicated caregiver room, modify bathrooms for 6-bed capacity, install comprehensive handrails and call systems, optimize common areas for 6 residents",
+      conversionDetails: "Convert bonus room to 3 private single resident rooms (80 sq ft minimum each, code-regulated), optimize all space for maximum capacity with private single rooms only, create dedicated caregiver room, modify bathrooms for 6-bed capacity, install comprehensive handrails and call systems in all 6 private single rooms, optimize common areas for 6 residents. IMPORTANT: All rooms must be private single rooms - market preference requires private rooms only, no shared/double rooms.",
       rentRange: "$4,500-$6,000/month (6-bed capacity, premium return)",
       targetProviders: "Established providers with multiple locations seeking 6-bed operations",
       steps: [
@@ -186,7 +186,7 @@ export default function ScenariosPage() {
       budget: "$75,000 - $100,000+",
       landlordShare: "75-85%",
       tenantShare: "15-25%",
-      conversionDetails: "Convert 3-car garage to 2 additional resident rooms, convert bonus room to 3 resident rooms, optimize all existing space, create dedicated caregiver room, modify bathrooms for 8-bed capacity, install comprehensive systems throughout, ensure adequate common area space for 8 residents, address parking requirements",
+      conversionDetails: "Convert 3-car garage to 2 private single resident rooms (80 sq ft minimum each, code-regulated), convert bonus room to 3 private single resident rooms (80 sq ft minimum each), optimize all existing space for private single rooms only, create dedicated caregiver room, modify bathrooms for 8-bed capacity, install comprehensive systems throughout all 8 private single rooms, ensure adequate common area space for 8 residents, address parking requirements. IMPORTANT: All rooms must be private single rooms - market preference requires private rooms only, no shared/double rooms.",
       rentRange: "$6,000-$8,500/month (8-bed capacity, maximum return)",
       targetProviders: "Large-scale providers with multiple 8-bed facilities, well-capitalized operators",
       steps: [
