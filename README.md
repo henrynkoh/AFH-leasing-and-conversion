@@ -1,451 +1,302 @@
-# AFH Property Advisor - Comprehensive Guide
+<div align="center">
 
-A comprehensive Next.js application designed to help property owners find optimal Adult Family Home (AFH) providers and plan property conversions for AFH operations. This tool provides detailed analysis, planning, and marketing resources for property owners looking to lease their properties to AFH providers in Washington State.
+# 🏠 AFH Property Advisor
 
-## Property Information
+### Complete AFH Property Analysis & Provider Search Platform
 
-- **Address:** 1713 Winterwood Dr, Centralia, WA
-- **Target Capacity:** 5-6 AFH beds
-- **Purpose:** Find proper AFH providers for long-term lease agreement
-- **Property Type:** Single-family home, ideal for AFH conversion
-- **Square Footage:** Approximately 3,000+ sq ft
-- **Market Area:** Centralia/Chehalis, Washington State
+**1713 Winterwood Dr, Centralia, WA** • 5-6 Bed Capacity • WABO-Ready
 
-## Overview
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-Private-red?style=for-the-badge)]()
 
-The AFH Property Advisor application is a comprehensive tool designed to assist property owners in navigating the complex process of leasing properties to Adult Family Home providers. The application provides detailed scenario analysis, floor plan visualization, timeline and budget planning, marketing materials, and provider search resources to help property owners make informed decisions and successfully lease their properties.
+---
 
-## Features
+</div>
 
-### 1. **Top 3 Scenarios** (`/scenarios`)
-   - Compare three different approaches to finding AFH providers
-   - **Scenario 1:** Direct provider lease (no conversion) - Fastest path with no upfront costs
-   - **Scenario 2:** Minimal WABO conversion + provider lease (recommended) - Balanced approach
-   - **Scenario 3:** Full conversion + long-term lease (optimal) - Maximum return on investment
-   - Each scenario includes:
-     - Detailed pros and cons analysis
-     - Complete timeline estimates
-     - Budget breakdowns with cost-sharing arrangements
-     - Step-by-step implementation guides
-     - Marketing approach recommendations
-     - Risk assessment and mitigation strategies
+## 🎯 Overview
 
-### 2. **Floor Plan Analysis** (`/floor-plan`)
-   - Interactive floor plan visualization with clickable rooms
-   - Room-by-room AFH compliance analysis
-   - Detailed modification requirements for each space
-   - Cost estimates for individual room conversions
-   - Capacity analysis showing 5-6 bed potential
-   - Compliance scoring and recommendations
-   - Visual representation of property layout
-   - Identification of optimal resident room locations
-   - Common area utilization analysis
-   - Bathroom accessibility assessment
+**AFH Property Advisor** is a comprehensive Next.js application designed to help property owners find optimal Adult Family Home (AFH) providers and plan property conversions for AFH operations. This platform provides detailed analysis, planning, and marketing resources for property owners looking to lease their properties to AFH providers in Washington State.
 
-### 3. **Timeline & Budget** (`/timeline`)
-   - Detailed daily activity breakdown for each phase
-   - Phase-by-phase project timeline with dependencies
-   - Comprehensive cost tracking with landlord/tenant cost-sharing
-   - Two conversion modes: Minimal WABO conversion vs. Full conversion
-   - Total cost calculations with percentage breakdowns
-   - Daily activity schedules with specific tasks
-   - Cost allocation by activity and phase
-   - Timeline visualization and Gantt-style planning
-   - Budget variance tracking capabilities
-   - Payment schedule recommendations
+<div align="center">
 
-### 4. **Marketing Materials** (`/marketing`)
-   - Ready-to-use marketing scripts and templates:
-     - Facebook community post templates (multiple variations)
-     - AFH locator website listings (detailed and concise versions)
-     - Email outreach templates (initial contact, follow-up, closing)
-     - Phone call scripts (cold call, follow-up, negotiation)
-   - Marketing channel recommendations with effectiveness ratings
-   - Scenario-specific marketing strategies
-   - Best practices for provider outreach
-   - Content calendar suggestions
-   - A/B testing recommendations for messaging
+### 🏡 Property Information
 
-### 5. **Provider Search** (`/providers`)
-   - Comprehensive resources for finding AFH providers:
-     - Washington State AFH Locator usage guide
-     - Facebook AFH communities directory
-     - Local association meeting schedules
-     - Direct provider outreach strategies
-   - Provider screening questions (12+ questions)
-   - Ideal provider criteria with scoring system
-   - Recommended lease terms and conditions
-   - Red flag identification guide
-   - Provider evaluation checklist
-   - Reference checking procedures
+| **Address** | **Capacity** | **Square Footage** | **Status** |
+|------------|-------------|-------------------|-----------|
+| 1713 Winterwood Dr, Centralia, WA | 5-6 Beds | 3,000+ sq ft | WABO-Ready |
 
-## Getting Started
+</div>
 
-### Prerequisites
+---
 
-Before you begin, ensure you have the following installed on your system:
+## ✨ Key Features
 
-- **Node.js 18+** - Required for running Next.js applications
-  - Download from [nodejs.org](https://nodejs.org/)
-  - Verify installation: `node --version`
-- **npm or yarn** - Package manager for dependencies
-  - npm comes with Node.js
-  - Verify installation: `npm --version`
-- **Git** (optional) - For version control
-- **Code Editor** - Recommended: VS Code, WebStorm, or similar
+<div align="center">
 
-### Installation
+### 🎯 Top 3 Scenarios
+Compare comprehensive solutions with detailed analysis, timelines, and budgets
 
-Follow these steps to set up the application:
+### 🏠 Interactive Floor Plan
+Room-by-room AFH compliance assessment with clickable visualization
+
+### 📅 Timeline & Budget
+Daily activity breakdown with cost-sharing calculations
+
+### 📢 Marketing Materials
+Ready-to-use templates for 9 platforms (Facebook, Instagram, Threads, etc.)
+
+### 🔍 Provider Search
+Comprehensive resources and screening tools
+
+### 📊 Complete Analysis
+Full documentation and planning tools
+
+</div>
+
+---
+
+## 🚀 Quick Start
 
 ```bash
-# Navigate to the project directory
+# Clone the repository
+git clone git@github.com:henrynkoh/AFH-leasing-and-conversion.git
+
+# Navigate to project
 cd afh-property-advisor
 
-# Install all dependencies
+# Install dependencies
 npm install
 
-# This will install:
-# - Next.js 16 framework
-# - React 19
-# - TypeScript
-# - Tailwind CSS
-# - All other required dependencies
-```
-
-### Development Server
-
-To run the application in development mode:
-
-```bash
-# Start the development server
+# Run development server
 npm run dev
-
-# The application will be available at:
-# http://localhost:3000
 ```
 
-The development server includes:
-- Hot module replacement (HMR) for instant updates
-- Error overlay for debugging
-- Fast refresh for React components
-- TypeScript type checking
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-### Build for Production
+---
 
-To create an optimized production build:
-
-```bash
-# Create production build
-npm run build
-
-# Start production server
-npm start
-
-# Or deploy to a hosting service like Vercel, Netlify, etc.
-```
-
-### Additional Commands
-
-```bash
-# Run linter to check code quality
-npm run lint
-
-# Type check TypeScript files
-npx tsc --noEmit
-```
-
-## Project Structure
+## 📋 Project Structure
 
 ```
 afh-property-advisor/
 ├── app/
-│   ├── page.tsx              # Dashboard/home page with overview
-│   ├── layout.tsx             # Root layout with navigation
-│   ├── globals.css            # Global styles and Tailwind configuration
-│   ├── scenarios/             # Top 3 scenarios comparison page
-│   │   └── page.tsx
-│   ├── floor-plan/            # Interactive floor plan analysis
-│   │   └── page.tsx
-│   ├── timeline/              # Timeline and budget planning
-│   │   └── page.tsx
-│   ├── marketing/             # Marketing materials and scripts
-│   │   └── page.tsx
-│   └── providers/             # Provider search resources
-│       └── page.tsx
-├── public/                    # Static assets (images, icons, etc.)
-├── package.json               # Project dependencies and scripts
-├── tsconfig.json             # TypeScript configuration
-├── next.config.ts            # Next.js configuration
-├── tailwind.config.js        # Tailwind CSS configuration
+│   ├── page.tsx              # Modern landing page
+│   ├── layout.tsx            # Root layout with navigation
+│   ├── scenarios/            # Top 3 scenarios comparison
+│   ├── floor-plan/           # Interactive floor plan analysis
+│   ├── timeline/             # Timeline and budget planning
+│   ├── marketing/            # Marketing materials and scripts
+│   └── providers/            # Provider search resources
+├── marketing-ads/            # Platform-specific marketing ads
+│   ├── facebook-ad.md
+│   ├── instagram-ad.md
+│   ├── threads-ad.md
+│   ├── blogger-ad.md
+│   ├── naver-blog-ad.md
+│   ├── tistory-ad.md
+│   ├── wordpress-ad.md
+│   ├── newsletter-ad.md
+│   └── email-ad.md
 ├── README.md                 # This file
 ├── MANUAL.md                 # Comprehensive user manual
 ├── TUTORIAL.md               # Step-by-step tutorial guide
-└── QUICKSTART.md             # Quick start guide
+└── QUICKSTART.md             # Quick start reference
 ```
-
-## Key Functionality
-
-### Scenario Comparison
-
-The application presents three comprehensive scenarios with detailed analysis:
-
-- **Scenario 1: Direct Provider Lease**
-  - Fastest path to revenue (30-60 days)
-  - No upfront costs for landlord
-  - Lower rent potential ($2,500-$3,500/month)
-  - Provider handles all conversion work
-  - Best for: Quick revenue, minimal risk, limited capital
-
-- **Scenario 2: Minimal WABO Conversion** (RECOMMENDED)
-  - Balanced approach with moderate investment
-  - Higher rent potential ($3,500-$5,000/month)
-  - 60-90 day conversion timeline
-  - Attracts more qualified providers
-  - Best for: Optimal balance of cost, time, and return
-
-- **Scenario 3: Full Conversion**
-  - Maximum return on investment
-  - Highest upfront investment ($50K-$75K)
-  - Premium rent potential ($5,000-$7,000/month)
-  - Longest timeline (120-180 days)
-  - Best for: Long-term investment, premium providers
-
-### Cost-Sharing Model
-
-The application uses a sophisticated cost-sharing model:
-
-- **Landlord pays 100%:**
-  - Permits and inspections (adds permanent value to property)
-  - Initial design and architectural drawings
-  - Property value assessments
-  - Legal and consulting fees
-
-- **Landlord pays 70-80%:**
-  - Construction and structural modifications
-  - Major improvements (bathrooms, common areas)
-  - Safety systems installation
-  - These improvements add permanent value to the property
-
-- **Tenant pays 20-30%:**
-  - Operational improvements
-  - Tenant-specific customizations
-  - Furniture and equipment (if not included)
-  - Operational systems setup
-
-- **Shared 50/50:**
-  - Contract negotiations
-  - Lease finalization
-  - Marketing materials (mutual benefit)
-  - Property tours and presentations
-
-### Timeline Estimates
-
-Detailed timeline estimates for each scenario:
-
-- **Scenario 1:** 30-90 days
-  - Week 1-2: Provider search initiation
-  - Week 3-6: Property listings and outreach
-  - Week 7-10: Provider screening and negotiations
-  - Week 11-12: Lease execution
-
-- **Scenario 2:** 90-120 days
-  - Days 1-15: Planning and permits
-  - Days 16-25: Contractor selection
-  - Days 26-70: Construction phases
-  - Days 71-85: Inspections and certification
-  - Days 86-120: Marketing and provider search
-
-- **Scenario 3:** 120-180 days
-  - Days 1-30: Planning and design
-  - Days 31-80: Major construction
-  - Days 81-120: Room finishes and ADA compliance
-  - Days 121-150: Final systems and inspections
-  - Days 151-180: Premium provider search
-
-## Technology Stack
-
-### Core Technologies
-
-- **Next.js 16** - React framework with App Router
-  - Server-side rendering capabilities
-  - Static site generation
-  - API routes support
-  - Optimized performance
-
-- **TypeScript** - Type-safe JavaScript
-  - Compile-time error checking
-  - Better IDE support
-  - Improved code maintainability
-  - Enhanced developer experience
-
-- **Tailwind CSS** - Utility-first CSS framework
-  - Rapid UI development
-  - Responsive design utilities
-  - Customizable design system
-  - Production-optimized CSS
-
-- **React 19** - UI library
-  - Component-based architecture
-  - Virtual DOM for performance
-  - Hooks for state management
-  - Server components support
-
-### Development Tools
-
-- **ESLint** - Code linting and quality
-- **PostCSS** - CSS processing
-- **Turbopack** - Fast bundler (Next.js 16)
-
-## Usage Guide
-
-### For Property Owners
-
-1. **Start with Scenarios Page**
-   - Review all three scenarios
-   - Understand pros, cons, and costs
-   - Select the approach that fits your situation
-
-2. **Analyze Your Property**
-   - Use Floor Plan page to understand conversion needs
-   - Review room-by-room requirements
-   - Estimate total conversion costs
-
-3. **Plan Your Timeline**
-   - Use Timeline page to create detailed schedule
-   - Understand daily activities and costs
-   - Plan for contingencies
-
-4. **Market Your Property**
-   - Use Marketing page templates
-   - Post on multiple channels
-   - Follow up with interested providers
-
-5. **Find Providers**
-   - Use Provider Search resources
-   - Screen potential tenants carefully
-   - Negotiate favorable lease terms
-
-### For Developers
-
-1. **Clone or Download** the project
-2. **Install Dependencies** with `npm install`
-3. **Run Development Server** with `npm run dev`
-4. **Customize** content for your specific property
-5. **Deploy** to your preferred hosting platform
-
-## Customization
-
-### Property-Specific Customization
-
-To customize the application for a different property:
-
-1. **Update Property Information**
-   - Edit property address in all pages
-   - Update square footage and room counts
-   - Modify floor plan visualization
-
-2. **Adjust Cost Estimates**
-   - Update conversion costs based on local rates
-   - Modify timeline estimates
-   - Adjust cost-sharing percentages
-
-3. **Customize Marketing Materials**
-   - Update property-specific details
-   - Modify contact information
-   - Adjust messaging for your market
-
-### Styling Customization
-
-- Edit `app/globals.css` for global styles
-- Modify Tailwind configuration in `tailwind.config.js`
-- Update component styles in individual page files
-
-## Best Practices
-
-### Property Management
-
-- **Document Everything:** Keep records of all communications, costs, and decisions
-- **Screen Thoroughly:** Use provided screening questions and check references
-- **Plan for Contingencies:** Add 10-15% buffer to timelines and budgets
-- **Legal Review:** Have all lease agreements reviewed by attorney
-- **Insurance:** Ensure adequate property and liability insurance
-
-### Marketing
-
-- **Multi-Channel Approach:** Use multiple platforms simultaneously
-- **Consistent Messaging:** Maintain consistent property description across channels
-- **Quick Response:** Respond to inquiries within 24 hours
-- **Professional Presentation:** Use high-quality photos and floor plans
-- **Follow Up:** Don't let leads go cold - follow up regularly
-
-### Provider Relations
-
-- **Clear Communication:** Set expectations early and clearly
-- **Flexible Terms:** Be willing to negotiate within reason
-- **Long-Term Focus:** Prioritize stable, long-term tenants
-- **Support Provider:** Help provider succeed for mutual benefit
-- **Regular Check-Ins:** Maintain relationship after lease execution
-
-## Troubleshooting
-
-### Common Issues
-
-**Build Errors:**
-- Ensure Node.js version is 18 or higher
-- Delete `node_modules` and `package-lock.json`, then run `npm install` again
-- Check for TypeScript errors with `npx tsc --noEmit`
-
-**Development Server Issues:**
-- Check if port 3000 is already in use
-- Clear Next.js cache: `.next` folder
-- Restart development server
-
-**Styling Issues:**
-- Ensure Tailwind CSS is properly configured
-- Check `globals.css` for proper imports
-- Verify Tailwind classes are being used correctly
-
-## Support and Resources
-
-### Additional Resources
-
-- **Washington State DSHS:** [AFH Information](https://www.dshs.wa.gov/altsa/home-and-community-services/adult-family-home)
-- **WABO Requirements:** Washington State Building Code
-- **AFH Locator:** [Official State Database](https://www.dshs.wa.gov/altsa/home-and-community-services/adult-family-home-locator)
-
-### Getting Help
-
-- Review the MANUAL.md for detailed documentation
-- Check TUTORIAL.md for step-by-step guides
-- Refer to QUICKSTART.md for rapid setup
-- Check Next.js documentation for framework-specific issues
-
-## License
-
-Private project for property management purposes. All rights reserved.
-
-## Version History
-
-- **v1.0.0** - Initial release with comprehensive features
-  - Scenario comparison tool
-  - Interactive floor plan analysis
-  - Timeline and budget planning
-  - Marketing materials library
-  - Provider search resources
-
-## Contributing
-
-This is a private project. For suggestions or improvements, please contact the project owner.
-
-## Acknowledgments
-
-- Built with Next.js and React
-- Styled with Tailwind CSS
-- Designed for Washington State AFH market
 
 ---
 
-**Last Updated:** 2024
-**Maintained By:** Property Owner
-**Contact:** [Your Contact Information]
+## 🎨 Features Breakdown
+
+### 1. **Top 3 Scenarios** 📊
+
+Compare three comprehensive approaches:
+
+- **Scenario 1:** Direct Provider Lease (No Conversion)
+  - ⚡ Fastest path: 30-90 days
+  - 💰 Investment: $0-$5K
+  - 💵 Rent: $2.5K-$3.5K/month
+
+- **Scenario 2:** Minimal WABO Conversion ⭐ **RECOMMENDED**
+  - ⚡ Timeline: 90-120 days
+  - 💰 Investment: $25K-$40K
+  - 💵 Rent: $3.5K-$5K/month
+
+- **Scenario 3:** Full AFH Conversion
+  - ⚡ Timeline: 120-180 days
+  - 💰 Investment: $50K-$75K
+  - 💵 Rent: $5K-$7K/month
+
+### 2. **Floor Plan Analysis** 🏠
+
+- ✅ Interactive SVG floor plan
+- ✅ Clickable rooms with detailed information
+- ✅ Room-by-room compliance assessment
+- ✅ Modification requirements and costs
+- ✅ Capacity analysis (5-6 beds verified)
+
+### 3. **Timeline & Budget** 📅
+
+- 📊 Daily activity breakdown
+- 💰 Cost tracking with landlord/tenant sharing
+- 📈 Phase-by-phase planning
+- ⏱️ Timeline estimates for all scenarios
+
+### 4. **Marketing Materials** 📢
+
+Ready-to-use templates for:
+- 📘 Facebook
+- 📷 Instagram
+- 💬 Threads
+- 📝 Blogger
+- 🇰🇷 Naver Blog
+- 🇰🇷 Tistory
+- 🌐 WordPress
+- 📧 Newsletter
+- ✉️ Email
+
+### 5. **Provider Search** 🔍
+
+- 🔎 Washington State AFH Locator guide
+- 👥 Facebook community strategies
+- 📋 Provider screening questions
+- ✅ Ideal provider criteria
+- 📄 Recommended lease terms
+
+---
+
+## 📚 Documentation
+
+| Document | Description |
+|----------|-------------|
+| [README.md](./README.md) | Project overview and quick start |
+| [MANUAL.md](./MANUAL.md) | Comprehensive user manual (37KB) |
+| [TUTORIAL.md](./TUTORIAL.md) | Step-by-step tutorials (31KB) |
+| [QUICKSTART.md](./QUICKSTART.md) | Quick reference guide (8KB) |
+
+---
+
+## 🎯 Property Highlights
+
+<div align="center">
+
+| Feature | Details |
+|---------|---------|
+| 🏠 **Property Type** | Single-family home, ideal for AFH |
+| 📏 **Square Footage** | 3,000+ sq ft |
+| 🛏️ **Bed Capacity** | 5-6 beds (verified) |
+| 🚿 **Bathrooms** | 2 (ADA modification ready) |
+| 🏘️ **Location** | Centralia, WA - Growing AFH market |
+| ✅ **Compliance Score** | 75% - Good foundation, needs modifications |
+
+</div>
+
+---
+
+## 💰 Cost Estimates
+
+<div align="center">
+
+| Conversion Level | Total Cost | Landlord Share | Tenant Share | Timeline |
+|-----------------|-----------|----------------|--------------|----------|
+| **Minimal WABO** | $25K-$40K | 70% ($17.5K-$28K) | 30% ($7.5K-$12K) | 60-90 days |
+| **Full Conversion** | $50K-$75K | 80% ($40K-$60K) | 20% ($10K-$15K) | 90-120 days |
+
+</div>
+
+---
+
+## 🛠️ Technology Stack
+
+<div align="center">
+
+![Next.js](https://img.shields.io/badge/Next.js-16.0-black?logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-19.2-blue?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8?logo=tailwind-css&logoColor=white)
+
+</div>
+
+---
+
+## 📊 Project Statistics
+
+<div align="center">
+
+| Metric | Value |
+|--------|-------|
+| **Total Files** | 20+ |
+| **Lines of Code** | 10,000+ |
+| **Documentation** | 4 comprehensive guides |
+| **Marketing Templates** | 9 platforms |
+| **Application Pages** | 6 interactive pages |
+
+</div>
+
+---
+
+## 🎨 Modern UI Features
+
+- ✨ **Gradient Backgrounds** - Beautiful color transitions
+- 🎭 **Interactive Animations** - Smooth hover effects and transitions
+- 📱 **Responsive Design** - Works on all devices
+- 🎯 **Visual Hierarchy** - Clear information architecture
+- 💫 **Modern Patterns** - Glassmorphism and backdrop blur effects
+- 🎨 **Color Schemes** - Professional blue/purple gradient theme
+
+---
+
+## 📖 Usage Guide
+
+### For Property Owners
+
+1. **Start with Scenarios** → Compare all three approaches
+2. **Analyze Your Property** → Use Floor Plan page for room-by-room analysis
+3. **Plan Your Timeline** → Use Timeline page for detailed scheduling
+4. **Market Your Property** → Use Marketing page templates
+5. **Find Providers** → Use Provider Search resources
+
+### For Developers
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Run development server: `npm run dev`
+4. Customize for your property
+5. Deploy to your preferred platform
+
+---
+
+## 🔗 Quick Links
+
+<div align="center">
+
+[🎯 Scenarios](./app/scenarios) • [🏠 Floor Plan](./app/floor-plan) • [📅 Timeline](./app/timeline) • [📢 Marketing](./app/marketing) • [🔍 Providers](./app/providers)
+
+</div>
+
+---
+
+## 📞 Resources
+
+- **Washington State AFH Locator:** [Official Database](https://www.dshs.wa.gov/altsa/home-and-community-services/adult-family-home-locator)
+- **WABO Requirements:** Contact local building department
+- **DSHS Information:** [AFH Resources](https://www.dshs.wa.gov/altsa/home-and-community-services/adult-family-home)
+
+---
+
+## 📝 License
+
+Private project for property management purposes. All rights reserved.
+
+---
+
+<div align="center">
+
+### ⭐ Star this repository if you find it useful!
+
+**Built with ❤️ for AFH Property Management**
+
+[⬆ Back to Top](#-afh-property-advisor)
+
+</div>

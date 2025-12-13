@@ -1,92 +1,295 @@
-import Link from "next/link";
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
+  const [scrollY, setScrollY] = useState(0);
+  const [activeFeature, setActiveFeature] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveFeature((prev) => (prev + 1) % 6);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const features = [
+    {
+      icon: '🎯',
+      title: 'Top 3 Scenarios',
+      description: 'Compare comprehensive solutions with detailed analysis',
+      color: 'from-blue-500 to-cyan-500',
+      link: '/scenarios'
+    },
+    {
+      icon: '🏠',
+      title: 'Floor Plan Analysis',
+      description: 'Interactive room-by-room AFH compliance assessment',
+      color: 'from-purple-500 to-pink-500',
+      link: '/floor-plan'
+    },
+    {
+      icon: '📅',
+      title: 'Timeline & Budget',
+      description: 'Daily activity breakdown with cost-sharing calculations',
+      color: 'from-green-500 to-emerald-500',
+      link: '/timeline'
+    },
+    {
+      icon: '📢',
+      title: 'Marketing Materials',
+      description: 'Ready-to-use templates for 9 platforms',
+      color: 'from-orange-500 to-red-500',
+      link: '/marketing'
+    },
+    {
+      icon: '🔍',
+      title: 'Provider Search',
+      description: 'Comprehensive resources and screening tools',
+      color: 'from-indigo-500 to-purple-500',
+      link: '/providers'
+    },
+    {
+      icon: '📊',
+      title: 'Complete Analysis',
+      description: 'Full documentation and planning tools',
+      color: 'from-teal-500 to-blue-500',
+      link: '/scenarios'
+    }
+  ];
+
+  const stats = [
+    { number: '5-6', label: 'Bed Capacity' },
+    { number: '3,000+', label: 'Square Feet' },
+    { number: '$25K-$75K', label: 'Conversion Range' },
+    { number: '90-180', label: 'Days Timeline' }
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">
-            Property Analysis Dashboard
-          </h1>
-          <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
-            <h2 className="text-xl font-semibold text-blue-900 mb-2">
-              1713 Winterwood Dr, Centralia, WA
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 opacity-20" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          }}></div>
+          <div 
+            className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20"
+            style={{ transform: `translateY(${scrollY * 0.5}px)` }}
+          ></div>
+        </div>
+
+        <div className="relative container mx-auto px-4 py-20 md:py-32">
+          <div className="text-center">
+            {/* Animated Badge */}
+            <div className="inline-block mb-6 animate-pulse">
+              <span className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-semibold shadow-lg">
+                🏠 AFH Property Advisor
+              </span>
+            </div>
+
+            {/* Main Heading */}
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                1713 Winterwood Dr
+              </span>
+              <br />
+              <span className="text-white">Centralia, WA</span>
+            </h1>
+
+            <p className="text-xl md:text-2xl text-blue-100 mb-4 max-w-3xl mx-auto">
+              Complete AFH Property Analysis & Provider Search Platform
+            </p>
+            <p className="text-lg text-blue-200 mb-12 max-w-2xl mx-auto">
+              Find optimal AFH providers, plan property conversion, and execute successful lease agreements
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+              <Link 
+                href="/scenarios"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold text-lg shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 transition-all duration-300"
+              >
+                Explore Scenarios →
+              </Link>
+              <Link 
+                href="/floor-plan"
+                className="px-8 py-4 bg-white/10 backdrop-blur-lg text-white rounded-full font-semibold text-lg border-2 border-white/20 hover:bg-white/20 transform hover:scale-105 transition-all duration-300"
+              >
+                View Floor Plan
+              </Link>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              {stats.map((stat, index) => (
+                <div 
+                  key={index}
+                  className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transform hover:scale-105 transition-all duration-300"
+                >
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-blue-200 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Features Grid */}
+      <div className="relative py-20 bg-gradient-to-b from-slate-900/50 to-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Comprehensive <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Tools & Resources</span>
             </h2>
-            <p className="text-gray-700">
-              Property purchased for AFH (Adult Family Home) lease operation. 
-              Target: 5-6 bed capacity with minimal conversion costs.
+            <p className="text-xl text-blue-200 max-w-2xl mx-auto">
+              Everything you need to successfully lease your property to AFH providers
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link href="/scenarios" className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-blue-500 hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-semibold mb-2">Top 3 Scenarios</h3>
-              <p className="text-gray-600">
-                Compare the best solutions for finding AFH providers and property conversion
-              </p>
-            </Link>
+            {features.map((feature, index) => (
+              <Link
+                key={index}
+                href={feature.link}
+                className={`group relative overflow-hidden rounded-2xl p-8 bg-gradient-to-br ${feature.color} transform hover:scale-105 transition-all duration-300 shadow-2xl ${
+                  activeFeature === index ? 'ring-4 ring-white/50 scale-105' : ''
+                }`}
+                onMouseEnter={() => setActiveFeature(index)}
+              >
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all"></div>
+                <div className="relative z-10">
+                  <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-white/90 text-lg">{feature.description}</p>
+                  <div className="mt-4 text-white/80 group-hover:text-white transition-colors">
+                    Learn more →
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/30 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
 
-            <Link href="/floor-plan" className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-blue-500 hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">🏠</div>
-              <h3 className="text-xl font-semibold mb-2">Floor Plan Analysis</h3>
-              <p className="text-gray-600">
-                Interactive floor plan with AFH compliance analysis and room assignments
-              </p>
-            </Link>
-
-            <Link href="/providers" className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-blue-500 hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold mb-2">Provider Search</h3>
-              <p className="text-gray-600">
-                Search AFH locator and Facebook communities for potential tenants
-              </p>
-            </Link>
-
-            <Link href="/timeline" className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-blue-500 hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">📅</div>
-              <h3 className="text-xl font-semibold mb-2">Timeline & Budget</h3>
-              <p className="text-gray-600">
-                Daily activity breakdown with costs and landlord/tenant cost sharing
-              </p>
-            </Link>
-
-            <Link href="/marketing" className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-blue-500 hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">📢</div>
-              <h3 className="text-xl font-semibold mb-2">Marketing Materials</h3>
-              <p className="text-gray-600">
-                Scripts, scenarios, and marketing content for provider outreach
-              </p>
-            </Link>
-
-            <div className="bg-white border-2 border-gray-200 rounded-lg p-6">
-              <div className="text-4xl mb-4">📋</div>
-              <h3 className="text-xl font-semibold mb-2">Lease Terms</h3>
-              <p className="text-gray-600">
-                Recommended terms and conditions for long-term AFH lease agreements
-              </p>
+      {/* Property Highlights */}
+      <div className="relative py-20 bg-gradient-to-b from-slate-900 to-blue-900/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+                Property <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Highlights</span>
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="text-3xl">✅</div>
+                    <div>
+                      <h4 className="text-white font-semibold text-lg mb-1">5-6 Bed Capacity</h4>
+                      <p className="text-blue-200">Verified through detailed floor plan analysis</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="text-3xl">✅</div>
+                    <div>
+                      <h4 className="text-white font-semibold text-lg mb-1">3,000+ Square Feet</h4>
+                      <p className="text-blue-200">Spacious layout ideal for AFH operations</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="text-3xl">✅</div>
+                    <div>
+                      <h4 className="text-white font-semibold text-lg mb-1">Prime Location</h4>
+                      <p className="text-blue-200">Centralia, WA - Growing AFH market</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="text-3xl">✅</div>
+                    <div>
+                      <h4 className="text-white font-semibold text-lg mb-1">Complete Analysis</h4>
+                      <p className="text-blue-200">Room-by-room compliance assessment included</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="text-3xl">✅</div>
+                    <div>
+                      <h4 className="text-white font-semibold text-lg mb-1">Flexible Options</h4>
+                      <p className="text-blue-200">Three conversion scenarios to choose from</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="text-3xl">✅</div>
+                    <div>
+                      <h4 className="text-white font-semibold text-lg mb-1">Marketing Ready</h4>
+                      <p className="text-blue-200">Templates for 9 platforms included</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-bold mb-4">Quick Summary</h2>
-          <div className="space-y-4">
-            <div className="border-l-4 border-green-500 pl-4">
-              <h3 className="font-semibold text-lg">Property Status</h3>
-              <p className="text-gray-600">Ready for conversion analysis and provider search</p>
-            </div>
-            <div className="border-l-4 border-yellow-500 pl-4">
-              <h3 className="font-semibold text-lg">Target Capacity</h3>
-              <p className="text-gray-600">5-6 AFH beds (WABO permit requirements)</p>
-            </div>
-            <div className="border-l-4 border-blue-500 pl-4">
-              <h3 className="font-semibold text-lg">Strategy</h3>
-              <p className="text-gray-600">
-                Find existing providers OR convert to WABO-ready and market to prospective providers
-              </p>
-            </div>
+      {/* Quick Links */}
+      <div className="relative py-20 bg-gradient-to-b from-blue-900/20 to-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Get <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Started</span>
+            </h2>
+            <p className="text-xl text-blue-200">Navigate to any section to begin</p>
           </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+            <Link href="/scenarios" className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transform hover:scale-105 transition-all">
+              <div className="text-3xl mb-2">🎯</div>
+              <div className="text-white font-semibold text-sm">Scenarios</div>
+            </Link>
+            <Link href="/floor-plan" className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transform hover:scale-105 transition-all">
+              <div className="text-3xl mb-2">🏠</div>
+              <div className="text-white font-semibold text-sm">Floor Plan</div>
+            </Link>
+            <Link href="/timeline" className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transform hover:scale-105 transition-all">
+              <div className="text-3xl mb-2">📅</div>
+              <div className="text-white font-semibold text-sm">Timeline</div>
+            </Link>
+            <Link href="/marketing" className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transform hover:scale-105 transition-all">
+              <div className="text-3xl mb-2">📢</div>
+              <div className="text-white font-semibold text-sm">Marketing</div>
+            </Link>
+            <Link href="/providers" className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transform hover:scale-105 transition-all">
+              <div className="text-3xl mb-2">🔍</div>
+              <div className="text-white font-semibold text-sm">Providers</div>
+            </Link>
+            <Link href="/" className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transform hover:scale-105 transition-all">
+              <div className="text-3xl mb-2">📊</div>
+              <div className="text-white font-semibold text-sm">Dashboard</div>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="relative py-12 bg-slate-900 border-t border-white/10">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-blue-200 mb-2">AFH Property Advisor</p>
+          <p className="text-blue-300/80 text-sm">1713 Winterwood Dr, Centralia, WA • Complete AFH Analysis Platform</p>
         </div>
       </div>
     </div>
