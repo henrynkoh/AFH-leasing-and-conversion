@@ -860,6 +860,316 @@ export default function ExecutionPlanPage() {
     }
   };
 
+  const getMaterialsForPhase = (phaseNumber: number) => {
+    const materialsByPhase: { [key: number]: any[] } = {
+      1: [
+        {
+          material: "Architectural Drawing Supplies",
+          budget: "$500",
+          status: "Place Order",
+          whatToBuy: "Drafting paper, CAD software licenses, printing supplies, measurement tools",
+          whereToBuy: "Architect's office supplies, online CAD software providers, office supply stores",
+          whoToBuy: "Architect (handled by architect)",
+          whenToBuy: "Day 1-3 (immediate upon contract signing)",
+          howToBuy: "Architect purchases directly, included in architectural fee"
+        },
+        {
+          material: "Permit Application Forms",
+          budget: "$100",
+          status: "In Stock",
+          whatToBuy: "WABO permit forms, building permit applications, fire department forms",
+          whereToBuy: "City of Centralia Building Department (118 W Maple St)",
+          whoToBuy: "Landlord or Architect",
+          whenToBuy: "Day 8-12 (before permit submission)",
+          howToBuy: "Download from city website or pick up in person at building department"
+        },
+        {
+          material: "Structural Engineering Services",
+          budget: "$3,000",
+          status: "Place Order",
+          whatToBuy: "Structural engineering review and report (if needed)",
+          whereToBuy: "Structural engineering firm (architect will recommend)",
+          whoToBuy: "Architect coordinates, Landlord approves",
+          whenToBuy: "Day 11-15 (if architect recommends)",
+          howToBuy: "Contract with structural engineer through architect's recommendation"
+        }
+      ],
+      2: [
+        {
+          material: "Permit Fees",
+          budget: "$4,000",
+          status: "Place Order",
+          whatToBuy: "WABO permit fee, building permit fee, fire permit fee, electrical permit fee, plumbing permit fee",
+          whereToBuy: "City of Centralia Building Department, Fire Department",
+          whoToBuy: "Landlord",
+          whenToBuy: "Day 26-40 (at time of permit submission)",
+          howToBuy: "Pay by check or credit card at permit office when submitting applications"
+        },
+        {
+          material: "Zoning Review Fees (if needed)",
+          budget: "$500",
+          status: "Place Order",
+          whatToBuy: "Zoning review fee for garage conversion (if applicable)",
+          whereToBuy: "City of Centralia Planning Department",
+          whoToBuy: "Landlord",
+          whenToBuy: "Day 31-35 (if garage conversion requires zoning approval)",
+          howToBuy: "Pay at planning department when submitting zoning application"
+        }
+      ],
+      3: [
+        {
+          material: "Framing Lumber",
+          budget: "$2,500",
+          status: "Place Order",
+          whatToBuy: "2x4 studs, 2x6 headers, plywood sheathing, OSB panels for 2 private single rooms",
+          whereToBuy: "Home Depot (Centralia), Lowe's (Chehalis), local lumber yard",
+          whoToBuy: "General Contractor",
+          whenToBuy: "Day 46-48 (order 2-3 days before framing starts)",
+          howToBuy: "Contractor orders and picks up, or delivery arranged. Get quote from 2-3 suppliers"
+        },
+        {
+          material: "Insulation",
+          budget: "$800",
+          status: "Place Order",
+          whatToBuy: "R-13 or R-15 fiberglass batts for walls, R-30 for ceiling (if applicable)",
+          whereToBuy: "Home Depot, Lowe's, local building supply",
+          whoToBuy: "General Contractor",
+          whenToBuy: "Day 50-52 (order before drywall installation)",
+          howToBuy: "Contractor orders, ensure adequate quantity for 2 rooms plus soundproofing between rooms"
+        },
+        {
+          material: "Drywall & Joint Compound",
+          budget: "$1,200",
+          status: "Place Order",
+          whatToBuy: "1/2 inch drywall sheets, joint compound, drywall tape, corner beads",
+          whereToBuy: "Home Depot, Lowe's, local building supply",
+          whoToBuy: "General Contractor",
+          whenToBuy: "Day 52-54 (order before drywall phase)",
+          howToBuy: "Contractor orders, calculate square footage needed for 2 rooms (approximately 400-500 sq ft)"
+        },
+        {
+          material: "Electrical Wire & Components",
+          budget: "$1,500",
+          status: "Place Order",
+          whatToBuy: "12/2 Romex wire, electrical boxes, outlets, switches, wire nuts, circuit breakers",
+          whereToBuy: "Electrical supply store, Home Depot, Lowe's",
+          whoToBuy: "Electrical Subcontractor",
+          whenToBuy: "Day 48-50 (order before electrical rough-in)",
+          howToBuy: "Electrical contractor orders, ensure code-compliant materials, get permit-approved materials list"
+        },
+        {
+          material: "Doors (32-inch minimum)",
+          budget: "$600",
+          status: "Place Order",
+          whatToBuy: "2 interior doors with 32-inch clear opening, lever handles (ADA-compliant), door frames",
+          whereToBuy: "Home Depot, Lowe's, local door supplier",
+          whoToBuy: "General Contractor",
+          whenToBuy: "Day 58-60 (order 1-2 weeks before installation, doors may need custom sizing)",
+          howToBuy: "Contractor orders, measure door openings carefully, ensure 32-inch minimum clear width"
+        },
+        {
+          material: "Windows (Egress Compliant)",
+          budget: "$1,000",
+          status: "Place Order",
+          whatToBuy: "Windows meeting egress requirements (minimum 5.7 sq ft opening, 20-inch minimum width/height)",
+          whereToBuy: "Window supplier, Home Depot, Lowe's",
+          whoToBuy: "General Contractor",
+          whenToBuy: "Day 55-58 (order early, windows may have 2-4 week lead time)",
+          howToBuy: "Contractor orders, verify egress requirements, custom sizing may be needed"
+        },
+        {
+          material: "Flooring Materials",
+          budget: "$1,500",
+          status: "Place Order",
+          whatToBuy: "Non-slip flooring (vinyl, laminate, or carpet suitable for healthcare), underlayment",
+          whereToBuy: "Flooring store, Home Depot, Lowe's",
+          whoToBuy: "General Contractor or Flooring Subcontractor",
+          whenToBuy: "Day 58-60 (order before flooring installation)",
+          howToBuy: "Contractor orders, ensure non-slip rating (coefficient of friction 0.6 minimum), healthcare-grade materials"
+        }
+      ],
+      4: [
+        {
+          material: "ADA-Compliant Toilets",
+          budget: "$800",
+          status: "Place Order",
+          whatToBuy: "2 ADA-compliant toilets (17-19 inch height), elongated bowls, soft-close seats",
+          whereToBuy: "Plumbing supply store, Home Depot, Lowe's",
+          whoToBuy: "Plumbing Subcontractor",
+          whenToBuy: "Day 66-68 (order before bathroom modifications)",
+          howToBuy: "Plumbing contractor orders, verify ADA compliance (17-19 inch height), check rough-in dimensions"
+        },
+        {
+          material: "Grab Bars",
+          budget: "$600",
+          status: "Place Order",
+          whatToBuy: "Grab bars for toilets and showers (33-36 inch height), proper anchoring hardware, wall reinforcement plates",
+          whereToBuy: "Medical supply store, Home Depot, Lowe's, online ADA suppliers",
+          whoToBuy: "General Contractor or Plumbing Subcontractor",
+          whenToBuy: "Day 68-70 (order before grab bar installation)",
+          howToBuy: "Contractor orders, ensure proper length and weight capacity, verify anchoring requirements"
+        },
+        {
+          material: "Roll-in Shower Components",
+          budget: "$2,500",
+          status: "Place Order",
+          whatToBuy: "Shower base (36x36 inch minimum), shower head (handheld), controls (lever-style), waterproofing membrane, drain",
+          whereToBuy: "Plumbing supply store, Home Depot, Lowe's",
+          whoToBuy: "Plumbing Subcontractor",
+          whenToBuy: "Day 68-72 (order early, custom sizing may be needed)",
+          howToBuy: "Plumbing contractor orders, ensure no threshold, proper slope for drainage, ADA-compliant controls"
+        },
+        {
+          material: "Accessible Sinks",
+          budget: "$800",
+          status: "Place Order",
+          whatToBuy: "2 accessible sinks with knee clearance (27 inches high, 30 inches wide, 19 inches deep), lever handles",
+          whereToBuy: "Plumbing supply store, Home Depot, Lowe's",
+          whoToBuy: "Plumbing Subcontractor",
+          whenToBuy: "Day 70-72 (order before sink installation)",
+          howToBuy: "Plumbing contractor orders, verify knee clearance dimensions, lever-style faucets"
+        },
+        {
+          material: "Non-Slip Bathroom Flooring",
+          budget: "$1,200",
+          status: "Place Order",
+          whatToBuy: "Non-slip tile or vinyl flooring (coefficient of friction 0.6 minimum) for both bathrooms",
+          whereToBuy: "Tile store, Home Depot, Lowe's",
+          whoToBuy: "General Contractor or Flooring Subcontractor",
+          whenToBuy: "Day 76-78 (order before bathroom flooring installation)",
+          howToBuy: "Contractor orders, verify slip resistance rating, ensure proper installation for wet areas"
+        },
+        {
+          material: "Bathroom Emergency Call Systems",
+          budget: "$400",
+          status: "Place Order",
+          whatToBuy: "2 emergency call buttons for bathrooms, waterproof models, connected to central system",
+          whereToBuy: "Medical supply store, security system supplier, online",
+          whoToBuy: "Electrical Subcontractor",
+          whenToBuy: "Day 80-82 (order before call system installation)",
+          howToBuy: "Electrical contractor orders, ensure waterproof rating, compatibility with central monitoring system"
+        },
+        {
+          material: "Caregiver Room Materials",
+          budget: "$1,500",
+          status: "Place Order",
+          whatToBuy: "Drywall, paint, flooring, lighting, door, basic fixtures for caregiver room",
+          whereToBuy: "Home Depot, Lowe's, local building supply",
+          whoToBuy: "General Contractor",
+          whenToBuy: "Day 66-70 (order materials for caregiver room creation)",
+          howToBuy: "Contractor orders standard room finishing materials, coordinate with main construction schedule"
+        }
+      ],
+      5: [
+        {
+          material: "Handrails",
+          budget: "$2,000",
+          status: "Place Order",
+          whatToBuy: "Handrails (34-38 inch height) for common areas and resident rooms, mounting hardware, end caps",
+          whereToBuy: "Medical supply store, Home Depot, Lowe's, ADA suppliers",
+          whoToBuy: "General Contractor",
+          whenToBuy: "Day 86-88 (order before handrail installation)",
+          howToBuy: "Contractor orders, verify height requirements (34-38 inches), ensure proper anchoring to studs, get code-compliant models"
+        },
+        {
+          material: "Emergency Call System",
+          budget: "$3,000",
+          status: "Place Order",
+          whatToBuy: "Emergency call buttons for all 5 resident rooms, central monitoring panel, wiring, installation hardware",
+          whereToBuy: "Medical supply store, security system supplier, online healthcare suppliers",
+          whoToBuy: "Electrical Subcontractor",
+          whenToBuy: "Day 88-90 (order early, system may need programming and setup time)",
+          howToBuy: "Electrical contractor orders complete system, ensure compatibility, verify range and reliability, get professional installation quote"
+        },
+        {
+          material: "Kitchen Accessibility Materials",
+          budget: "$1,500",
+          status: "Place Order",
+          whatToBuy: "Accessible counter materials (34 inch height), accessible sink, lever-handle faucets, accessible storage solutions",
+          whereToBuy: "Home Depot, Lowe's, kitchen supply store",
+          whoToBuy: "General Contractor",
+          whenToBuy: "Day 90-92 (order before kitchen modifications)",
+          howToBuy: "Contractor orders, verify counter height (34 inches maximum), ensure knee clearance, accessible controls"
+        },
+        {
+          material: "Fire Suppression System",
+          budget: "$8,000",
+          status: "Place Order",
+          whatToBuy: "Fire suppression system components, smoke detectors, fire alarms, sprinkler heads (if required), control panel",
+          whereToBuy: "Fire safety supplier, licensed fire system installer",
+          whoToBuy: "Fire System Subcontractor (licensed installer required)",
+          whenToBuy: "Day 92-94 (order early, system requires professional installation and inspection)",
+          howToBuy: "Licensed fire system contractor orders and installs, must meet code requirements, requires fire department approval"
+        },
+        {
+          material: "Patio Ramp Materials",
+          budget: "$2,000",
+          status: "Place Order",
+          whatToBuy: "Concrete or composite ramp materials, handrails for ramp, non-slip surface material, anchoring hardware",
+          whereToBuy: "Home Depot, Lowe's, concrete supplier, railing supplier",
+          whoToBuy: "General Contractor",
+          whenToBuy: "Day 94-96 (order before ramp construction)",
+          howToBuy: "Contractor orders, ensure 1:12 maximum slope, verify handrail requirements (34-38 inch height), non-slip surface"
+        },
+        {
+          material: "Lighting Fixtures",
+          budget: "$1,500",
+          status: "Place Order",
+          whatToBuy: "LED light fixtures (20 foot-candles minimum), exit signs (illuminated), task lighting, bulbs",
+          whereToBuy: "Electrical supply store, Home Depot, Lowe's",
+          whoToBuy: "Electrical Subcontractor",
+          whenToBuy: "Day 96-98 (order before lighting installation)",
+          howToBuy: "Electrical contractor orders, verify light output (20 foot-candles minimum), ensure adequate coverage, energy-efficient LEDs"
+        }
+      ],
+      6: [
+        {
+          material: "Inspection Correction Materials",
+          budget: "$5,000",
+          status: "Place Order (as needed)",
+          whatToBuy: "Materials for addressing inspection corrections (varies based on inspector feedback)",
+          whereToBuy: "Various suppliers based on correction needs",
+          whoToBuy: "General Contractor",
+          whenToBuy: "Day 191-200 (after inspections identify corrections needed)",
+          howToBuy: "Contractor orders materials based on specific inspection corrections, coordinate with inspector requirements"
+        },
+        {
+          material: "Final Certification Documents",
+          budget: "$200",
+          status: "In Stock",
+          whatToBuy: "Document printing, certification copies, permit copies",
+          whereToBuy: "Printing service, building department",
+          whoToBuy: "Landlord",
+          whenToBuy: "Day 201-210 (after final approvals)",
+          howToBuy: "Obtain copies from building department, print additional copies as needed for records"
+        }
+      ],
+      7: [
+        {
+          material: "Professional Photography",
+          budget: "$500",
+          status: "Place Order",
+          whatToBuy: "Professional property photography for marketing materials",
+          whereToBuy: "Local photographer, real estate photography service",
+          whoToBuy: "Landlord",
+          whenToBuy: "Day 211-215 (schedule after property is complete and staged)",
+          howToBuy: "Hire professional photographer, schedule property visit, request high-resolution images for marketing"
+        },
+        {
+          material: "Marketing Materials Printing",
+          budget: "$300",
+          status: "Place Order",
+          whatToBuy: "Printed floor plans, property brochures, marketing flyers",
+          whereToBuy: "Print shop, online printing service",
+          whoToBuy: "Landlord",
+          whenToBuy: "Day 215-220 (after photos and materials are ready)",
+          howToBuy: "Order professional printing, ensure high quality, get multiple copies for distribution"
+        }
+      ]
+    };
+    return materialsByPhase[phaseNumber] || [];
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="container mx-auto px-4">
@@ -1023,6 +1333,60 @@ export default function ExecutionPlanPage() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Materials Purchase Schedule */}
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+          <h2 className="text-3xl font-bold mb-6 text-black">Detailed Materials Purchase Schedule</h2>
+          <p className="text-lg text-gray-700 mb-6">Complete materials list with purchase schedule for each construction phase</p>
+          
+          {constructionSchedule.phases.map((phase, phaseIndex) => {
+            const materialsForPhase = getMaterialsForPhase(phaseIndex + 1);
+            if (materialsForPhase.length === 0) return null;
+            return (
+              <div key={phaseIndex} className="mb-8 border-2 border-gray-400 rounded-lg p-6 bg-gray-50 shadow-lg">
+                <h3 className="text-2xl font-bold mb-4 text-black">{phase.phase}</h3>
+                <div className="text-lg font-semibold mb-4 text-gray-700 bg-white px-4 py-2 rounded inline-block">{phase.startDate} - {phase.endDate}</div>
+                
+                <div className="overflow-x-auto mt-4">
+                  <table className="w-full border-collapse border-2 border-gray-400 bg-white">
+                    <thead>
+                      <tr className="bg-gray-300">
+                        <th className="border-2 border-gray-500 p-4 text-left font-bold text-lg text-black">Material</th>
+                        <th className="border-2 border-gray-500 p-4 text-left font-bold text-lg text-black">Budget</th>
+                        <th className="border-2 border-gray-500 p-4 text-left font-bold text-lg text-black">Status</th>
+                        <th className="border-2 border-gray-500 p-4 text-left font-bold text-lg text-black">What to Buy</th>
+                        <th className="border-2 border-gray-500 p-4 text-left font-bold text-lg text-black">Where to Buy</th>
+                        <th className="border-2 border-gray-500 p-4 text-left font-bold text-lg text-black">Who to Buy</th>
+                        <th className="border-2 border-gray-500 p-4 text-left font-bold text-lg text-black">When to Buy</th>
+                        <th className="border-2 border-gray-500 p-4 text-left font-bold text-lg text-black">How to Buy</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {materialsForPhase.map((material, matIndex) => (
+                        <tr key={matIndex} className={matIndex % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                          <td className="border-2 border-gray-400 p-4 font-bold text-lg text-black">{material.material}</td>
+                          <td className="border-2 border-gray-400 p-4 font-bold text-lg text-red-700">{material.budget}</td>
+                          <td className="border-2 border-gray-400 p-4">
+                            <span className={`px-3 py-2 rounded-full font-bold text-base ${
+                              material.status === 'In Stock' ? 'bg-green-300 text-green-900' : 'bg-yellow-300 text-yellow-900'
+                            }`}>
+                              {material.status}
+                            </span>
+                          </td>
+                          <td className="border-2 border-gray-400 p-4 text-base text-black font-semibold leading-relaxed">{material.whatToBuy}</td>
+                          <td className="border-2 border-gray-400 p-4 text-base text-black font-semibold leading-relaxed">{material.whereToBuy}</td>
+                          <td className="border-2 border-gray-400 p-4 text-base text-black font-semibold leading-relaxed">{material.whoToBuy}</td>
+                          <td className="border-2 border-gray-400 p-4 text-base text-black font-semibold leading-relaxed">{material.whenToBuy}</td>
+                          <td className="border-2 border-gray-400 p-4 text-base text-black font-semibold leading-relaxed">{material.howToBuy}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         {/* Contacts */}
