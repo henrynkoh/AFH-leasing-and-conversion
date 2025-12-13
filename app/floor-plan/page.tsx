@@ -42,20 +42,20 @@ export default function FloorPlanPage() {
       accessibility: 'Good - Standard size suitable for resident room',
       notes: 'Standard bedroom size, suitable for most residents. Adjacent to Bedroom 1, good for residents who may benefit from proximity.'
     },
-    'cg-room': {
-      name: 'CG Room',
-      afhUse: 'Resident Room (Bed 4) or Staff Room',
+    'den-office': {
+      name: 'Den/Office',
+      afhUse: 'Administrative Office / Staff Room / Potential Resident Room',
       compliance: 'Good - Can serve multiple purposes',
-      modifications: 'If used as resident room: Add handrails along walls (34-38 inch height), install emergency call system, ensure adequate lighting (20 foot-candles minimum), verify door width (32-inch minimum), check window accessibility, ensure wheelchair turning radius (60 inches), install accessible storage. If used as staff room: Minimal modifications needed, ensure adequate lighting and ventilation, provide storage for staff belongings, ensure privacy for staff breaks',
-      cost: '$1,500-$2,000 (if resident room), $500-$1,000 (if staff room)',
-      dimensions: 'Approximately 100-120 sq ft',
-      timeline: '2-4 days (resident room), 1-2 days (staff room)',
-      waboRequirements: 'If resident room: Must meet 80 sq ft minimum, needs handrails and call system. If staff room: Minimal requirements',
-      accessibility: 'Good - Flexible space can accommodate either use',
-      notes: 'This room offers flexibility - can serve as additional resident room or dedicated staff space. Decision depends on operational needs and capacity goals.'
+      modifications: 'If used as resident room: Add handrails along walls (34-38 inch height), install emergency call system, ensure adequate lighting (20 foot-candles minimum), verify door width (32-inch minimum), check window accessibility, ensure wheelchair turning radius (60 inches), install accessible storage. If used as office/staff room: Minimal modifications needed, ensure adequate lighting and ventilation, provide storage for records and staff belongings, ensure privacy for administrative work',
+      cost: '$1,500-$2,000 (if resident room), $500-$1,000 (if office/staff room)',
+      dimensions: 'Approximately 100-150 sq ft',
+      timeline: '2-4 days (resident room), 1-2 days (office/staff room)',
+      waboRequirements: 'If resident room: Must meet 80 sq ft minimum, needs handrails and call system. If office/staff room: Minimal requirements',
+      accessibility: 'Good - Flexible space can accommodate multiple uses',
+      notes: 'Den/office space offers flexibility - can serve as additional resident room (Bed 4) for 4-bed capacity, or dedicated administrative/staff space. Decision depends on operational needs and capacity goals. Has vaulted ceilings and good natural light.'
     },
     'primary-bath': {
-      name: 'Primary Bathroom',
+      name: 'Primary Bathroom (Bath Off Primary)',
       afhUse: 'Resident Bathroom',
       compliance: 'Needs modifications',
       modifications: 'Install grab bars at toilet (side and rear, 33-36 inches high), install grab bars in shower/tub area (horizontal and vertical, properly anchored), convert to roll-in shower capability (36x36 inch minimum, no threshold, proper slope), replace toilet with ADA-compliant model (17-19 inch height, proper clearance), install accessible sink (knee clearance 27 inches high, 30 inches wide, 19 inches deep), ensure adequate clearance for wheelchair (60-inch turning radius), install non-slip flooring throughout (coefficient of friction 0.6 minimum), ensure adequate lighting (20 foot-candles minimum), install emergency call system, ensure proper ventilation, verify water temperature controls (anti-scald), install accessible mirror (bottom edge 40 inches max from floor), ensure adequate storage at accessible height',
@@ -64,7 +64,7 @@ export default function FloorPlanPage() {
       timeline: '10-15 days for complete conversion',
       waboRequirements: 'Must meet ADA bathroom requirements, one accessible bathroom per 4 residents minimum',
       accessibility: 'Needs significant modifications for full ADA compliance',
-      notes: 'This is a critical modification area. Bathroom accessibility is essential for resident safety and compliance. Consider professional contractor with ADA experience.'
+      notes: 'Bath off primary bedroom is convenient for resident in primary bedroom. This is a critical modification area. Bathroom accessibility is essential for resident safety and compliance. Consider professional contractor with ADA experience.'
     },
     'bath': {
       name: 'Bath',
@@ -78,29 +78,41 @@ export default function FloorPlanPage() {
       accessibility: 'Needs significant modifications for full ADA compliance',
       notes: 'Second bathroom is essential for 5-6 bed capacity. Both bathrooms must be fully accessible. Location relative to resident rooms should be considered.'
     },
-    'living': {
-      name: 'Living Room',
-      afhUse: 'Common Area / Activity Room',
-      compliance: 'Excellent - Large open space',
-      modifications: 'Install handrails along walls at proper height (34-38 inches) especially near seating areas, ensure adequate lighting throughout (minimum 20 foot-candles, task lighting for activities), clearly mark emergency exits with illuminated signs, ensure wheelchair accessibility throughout (60-inch turning radius, 36-inch wide pathways), install accessible seating options (various heights, armrests), ensure adequate space for activities (minimum 35 sq ft per resident), verify electrical outlets are accessible, ensure heating/cooling is adequate and accessible, add visual contrast for doorways and thresholds, ensure furniture arrangement allows for mobility aids, install activity tables at accessible height, verify adequate space for group activities',
+    'great-room': {
+      name: 'Great Room',
+      afhUse: 'Primary Common Area / Activity Room',
+      compliance: 'Excellent - Large open space with vaulted ceilings',
+      modifications: 'Install handrails along walls at proper height (34-38 inches) especially near seating areas, ensure adequate lighting throughout (minimum 20 foot-candles, task lighting for activities, skylights provide natural light), clearly mark emergency exits with illuminated signs, ensure wheelchair accessibility throughout (60-inch turning radius, 36-inch wide pathways), install accessible seating options (various heights, armrests), ensure adequate space for activities (minimum 35 sq ft per resident), verify electrical outlets are accessible, ensure heating/cooling is adequate and accessible (forced air system), add visual contrast for doorways and thresholds, ensure furniture arrangement allows for mobility aids, install activity tables at accessible height, verify adequate space for group activities, utilize vaulted ceiling space for better air circulation',
       cost: '$2,000-$3,000',
-      dimensions: 'Approximately 300-400 sq ft',
+      dimensions: 'Approximately 250-350 sq ft',
       timeline: '5-7 days for modifications',
       waboRequirements: 'Must provide minimum 35 sq ft per resident in common areas, adequate lighting and accessibility required',
-      accessibility: 'Excellent - Large space provides excellent accessibility options',
-      notes: 'This is the primary common area. Large size allows for various activities and comfortable resident interaction. Excellent foundation for AFH operations.'
+      accessibility: 'Excellent - Large space with vaulted ceilings provides excellent accessibility and air quality',
+      notes: 'This is the primary common area (Great Room). Large size with vaulted ceilings and skylights allows for various activities and comfortable resident interaction. Excellent natural light and air circulation. Excellent foundation for AFH operations.'
+    },
+    'living': {
+      name: 'Living Room',
+      afhUse: 'Secondary Common Area / Activity Room',
+      compliance: 'Good - Additional common space',
+      modifications: 'Install handrails along walls at proper height (34-38 inches) especially near seating areas, ensure adequate lighting throughout (minimum 20 foot-candles, task lighting for activities), clearly mark emergency exits with illuminated signs, ensure wheelchair accessibility throughout (60-inch turning radius, 36-inch wide pathways), install accessible seating options (various heights, armrests), ensure adequate space for activities, verify electrical outlets are accessible, ensure heating/cooling is adequate and accessible, add visual contrast for doorways and thresholds, ensure furniture arrangement allows for mobility aids',
+      cost: '$1,500-$2,500',
+      dimensions: 'Approximately 150-200 sq ft',
+      timeline: '3-5 days for modifications',
+      waboRequirements: 'Common area requirements apply, adequate lighting and accessibility needed',
+      accessibility: 'Good - Additional common space enhances resident options',
+      notes: 'Secondary common area provides variety for residents. Can serve as quiet space or additional activity area, separate from main great room.'
     },
     'kitchen': {
-      name: 'Kitchen',
+      name: 'Kitchen with Eating Space',
       afhUse: 'Resident Dining / Meal Prep',
       compliance: 'Needs modifications',
-      modifications: 'Ensure accessible counter heights (34 inches maximum, with knee clearance), provide adequate space for wheelchair maneuverability (60-inch turning radius, 36-inch wide pathways), install fire suppression system meeting code requirements, ensure accessible storage (shelves and cabinets at reachable heights), install accessible appliances (front-control ranges, side-opening ovens if possible), ensure adequate lighting (20 foot-candles minimum, task lighting over work areas), verify electrical outlets are accessible, ensure adequate ventilation, install accessible sink (knee clearance, lever handles), ensure adequate workspace for meal preparation, verify adequate space for food storage, ensure proper food safety compliance, install accessible controls for all appliances',
+      modifications: 'Ensure accessible counter heights (34 inches maximum, with knee clearance), provide adequate space for wheelchair maneuverability (60-inch turning radius, 36-inch wide pathways), install fire suppression system meeting code requirements, ensure accessible storage (shelves and cabinets at reachable heights), install accessible appliances (front-control ranges, side-opening ovens if possible), ensure adequate lighting (20 foot-candles minimum, task lighting over work areas, skylights provide natural light), verify electrical outlets are accessible, ensure adequate ventilation, install accessible sink (knee clearance, lever handles), ensure adequate workspace for meal preparation, verify adequate space for food storage, ensure proper food safety compliance, install accessible controls for all appliances, utilize eating space area for accessible dining if needed',
       cost: '$3,000-$5,000',
-      dimensions: 'Approximately 150-200 sq ft',
+      dimensions: 'Approximately 150-200 sq ft (including eating space)',
       timeline: '7-10 days for modifications',
       waboRequirements: 'Must meet accessibility requirements, fire suppression required for commercial use',
       accessibility: 'Needs modifications for full accessibility',
-      notes: 'Kitchen modifications are critical for AFH operations. Consider whether commercial-grade equipment is needed based on resident capacity and meal service requirements.'
+      notes: 'Kitchen with eating space is well-designed for AFH operations. Includes built-in eating area which can supplement dining room. Has all appliances (dishwasher, disposal, microwave, refrigerator, stove/range, garbage disposal). Modifications are critical for AFH operations.'
     },
     'dining': {
       name: 'Dining Room',
@@ -138,29 +150,29 @@ export default function FloorPlanPage() {
       accessibility: 'Good - Private space for administrative work',
       notes: 'Office space is essential for AFH operations. Provides space for records, administrative work, and staff coordination. Privacy is important for resident records.'
     },
-    'laundry': {
-      name: 'Laundry',
-      afhUse: 'Resident Laundry Facility',
-      compliance: 'Good - Existing laundry space',
-      modifications: 'Ensure accessible washer/dryer (front-loading preferred, controls at accessible height), ensure adequate ventilation (proper exhaust, air circulation), provide adequate space for laundry operations (60-inch turning radius if residents use), install accessible storage for laundry supplies, ensure proper drainage and water supply, verify electrical requirements are met, ensure adequate lighting (20 foot-candles minimum), install accessible work surfaces if needed, ensure proper organization for efficiency, verify adequate space for sorting and folding, ensure safety features (anti-scald, proper electrical)',
+    'utility-room': {
+      name: 'Utility Room',
+      afhUse: 'Laundry Facility / Storage',
+      compliance: 'Good - Existing utility space',
+      modifications: 'Ensure accessible washer/dryer (front-loading preferred, controls at accessible height), ensure adequate ventilation (proper exhaust, air circulation), provide adequate space for laundry operations (60-inch turning radius if residents use), install accessible storage for laundry supplies and utilities, ensure proper drainage and water supply, verify electrical requirements are met, ensure adequate lighting (20 foot-candles minimum), install accessible work surfaces if needed, ensure proper organization for efficiency, verify adequate space for sorting and folding, ensure safety features (anti-scald, proper electrical), accommodate water heater and other utilities',
       cost: '$1,000-$2,000',
       dimensions: 'Approximately 40-60 sq ft',
       timeline: '2-3 days for modifications',
       waboRequirements: 'Adequate facilities for resident laundry needs, accessibility if residents use',
-      accessibility: 'Good - Existing space can be made accessible',
-      notes: 'Laundry facilities are important for AFH operations. Consider whether residents will use or if staff-only. Accessibility requirements vary accordingly.'
+      accessibility: 'Good - Existing utility space can be made accessible',
+      notes: 'Utility room contains laundry facilities (washer, dryer) and water heater (gas, located in garage). Important for AFH operations. Consider whether residents will use laundry or if staff-only. Accessibility requirements vary accordingly.'
     },
     'patio': {
       name: 'Patio',
       afhUse: 'Outdoor Common Area',
-      compliance: 'Excellent - Outdoor space for residents',
-      modifications: 'Install wheelchair-accessible ramp (maximum 1:12 slope, proper width, landing areas), add handrails along ramp and patio edges (34-38 inch height, proper anchoring), install non-slip surface throughout (coefficient of friction 0.6 minimum, weather-resistant), ensure adequate lighting for evening use (20 foot-candles minimum), consider weather protection (covered area, wind protection), ensure proper drainage (no standing water, proper slope), install accessible seating options (various heights, armrests), ensure adequate space for activities (minimum 35 sq ft per resident if counted as common area), verify accessibility from interior (proper door, threshold), ensure safety features (proper railings, no tripping hazards), consider accessibility for different weather conditions',
+      compliance: 'Excellent - Outdoor space for residents with territorial view',
+      modifications: 'Install wheelchair-accessible ramp (maximum 1:12 slope, proper width, landing areas), add handrails along ramp and patio edges (34-38 inch height, proper anchoring), install non-slip surface throughout (coefficient of friction 0.6 minimum, weather-resistant), ensure adequate lighting for evening use (20 foot-candles minimum), consider weather protection (covered area, wind protection), ensure proper drainage (no standing water, proper slope), install accessible seating options (various heights, armrests), ensure adequate space for activities (minimum 35 sq ft per resident if counted as common area), verify accessibility from interior (proper door, threshold), ensure safety features (proper railings, no tripping hazards), consider accessibility for different weather conditions, ensure hot tub/spa area is accessible if used by residents',
       cost: '$3,000-$5,000',
-      dimensions: 'Approximately 400-500 sq ft (30x14 feet)',
+      dimensions: 'Approximately 200-300 sq ft',
       timeline: '7-10 days for modifications',
       waboRequirements: 'Outdoor common areas must be accessible, proper ramps and safety features required',
-      accessibility: 'Excellent - Large outdoor space with good modification potential',
-      notes: 'Outdoor space is highly valued by residents and families. Large patio area provides excellent opportunity for outdoor activities and fresh air. Ramp installation is critical for accessibility.'
+      accessibility: 'Excellent - Outdoor space with territorial view and hot tub/spa provides excellent resident amenities',
+      notes: 'Outdoor space is highly valued by residents and families. Patio area with territorial view and hot tub/spa provides excellent opportunity for outdoor activities and relaxation. Ramp installation is critical for accessibility. Cul-de-sac location provides quiet, safe environment.'
     },
     'garage': {
       name: '3 Car Garage',
@@ -177,33 +189,39 @@ export default function FloorPlanPage() {
   };
 
   const afhAnalysis = {
-    totalBeds: '5-6 beds possible',
-    residentRooms: ['Primary Bedroom', 'Bedroom 1', 'Bedroom 2', 'CG Room', 'Living (if partitioned)'],
-    commonAreas: ['Living Room', 'Dining Room', 'Den', 'Patio'],
+    totalBeds: '3-4 beds possible',
+    residentRooms: ['Primary Bedroom (with walk-in closet, bath off primary)', 'Bedroom 1', 'Bedroom 2', 'Den/Office (if converted to resident room)'],
+    commonAreas: ['Great Room (primary)', 'Living Room (secondary)', 'Dining Room', 'Kitchen with Eating Space', 'Patio'],
     bathrooms: 2,
     complianceScore: '75% - Good foundation, needs modifications',
     estimatedConversionCost: '$25,000 - $40,000 (minimal)',
     estimatedConversionCostFull: '$50,000 - $75,000 (full)',
-    totalSquareFootage: 'Approximately 3,000+ sq ft',
-    residentRoomTotal: 'Approximately 640-820 sq ft (4-5 rooms)',
-    commonAreaTotal: 'Approximately 920-1,210 sq ft',
-    bathroomTotal: 'Approximately 90-140 sq ft (2 bathrooms)',
-    supportSpaceTotal: 'Approximately 1,350+ sq ft (kitchen, office, laundry, garage)',
+    totalSquareFootage: '2,100 sq ft (single level)',
+    residentRoomTotal: 'Approximately 450-600 sq ft (3 bedrooms, potentially 4 if den converted)',
+    commonAreaTotal: 'Approximately 700-900 sq ft (great room, living, dining, kitchen eating space)',
+    bathroomTotal: 'Approximately 100-160 sq ft (2 full bathrooms)',
+    supportSpaceTotal: 'Approximately 740+ sq ft (kitchen, den/office, utility room, entry hall, 3-car garage)',
     keyStrengths: [
-      'Large common areas provide excellent space for resident activities',
-      'Multiple resident rooms allow for 5-6 bed capacity',
-      'Outdoor patio space is highly valued by residents and families',
-      'Good room sizes meet minimum requirements comfortably',
-      'Layout allows for good flow and accessibility',
-      'Garage provides excellent storage capacity'
+      'Single-level layout (all on main level) - excellent for accessibility and AFH operations',
+      'Great room with vaulted ceilings and skylights provides excellent natural light and air quality',
+      '3 bedrooms on main level suitable for resident rooms',
+      'Primary bedroom has walk-in closet and bath off primary - ideal for resident room',
+      'Outdoor patio with territorial view and hot tub/spa highly valued by residents',
+      'Cul-de-sac location provides quiet, safe environment',
+      '3-car attached garage with RV parking provides excellent storage',
+      'Modern construction (2005) with good condition',
+      'Partially fenced yard provides security',
+      'Kitchen with eating space provides flexibility for dining'
     ],
     keyChallenges: [
-      'Both bathrooms need significant ADA modifications',
-      'Kitchen requires accessibility improvements',
+      'Both bathrooms need significant ADA modifications (bath off primary and second full bathroom)',
+      'Kitchen requires accessibility improvements and fire suppression system',
       'Handrails needed throughout resident rooms and common areas',
       'Emergency call systems needed in all resident rooms',
       'Patio requires ramp installation for accessibility',
-      'Some rooms may need structural considerations for modifications'
+      'Capacity limited to 3-4 beds (not 5-6) due to 2,100 sq ft size',
+      'Den/office conversion to resident room would reduce administrative space',
+      'Single-level design is good but may limit expansion options'
     ],
     compliancePriorities: [
       'Bathroom modifications (highest priority - $10,000-$16,000)',
@@ -282,13 +300,20 @@ export default function FloorPlanPage() {
                     onClick={() => setSelectedRoom('bath')} />
                   <text x="50" y="310" textAnchor="middle" className="text-xs">Bath</text>
 
+                  {/* Great Room */}
+                  <rect x="200" y="140" width="200" height="200" fill="#e8f5e9" stroke="#388e3c" strokeWidth="2"
+                    className="cursor-pointer"
+                    onMouseEnter={(e) => e.currentTarget.setAttribute('fill', '#c8e6c9')}
+                    onMouseLeave={(e) => e.currentTarget.setAttribute('fill', '#e8f5e9')}
+                    onClick={() => setSelectedRoom('great-room')} />
+                  <text x="300" y="240" textAnchor="middle" className="text-sm font-semibold">Great Room</text>
                   {/* Living Room */}
-                  <rect x="200" y="140" width="300" height="200" fill="#e8f5e9" stroke="#388e3c" strokeWidth="2"
+                  <rect x="400" y="140" width="100" height="200" fill="#e8f5e9" stroke="#388e3c" strokeWidth="2"
                     className="cursor-pointer"
                     onMouseEnter={(e) => e.currentTarget.setAttribute('fill', '#c8e6c9')}
                     onMouseLeave={(e) => e.currentTarget.setAttribute('fill', '#e8f5e9')}
                     onClick={() => setSelectedRoom('living')} />
-                  <text x="350" y="240" textAnchor="middle" className="text-sm font-semibold">Living</text>
+                  <text x="450" y="240" textAnchor="middle" className="text-xs font-semibold">Living</text>
 
                   {/* Kitchen */}
                   <rect x="500" y="140" width="150" height="200" fill="#fff9c4" stroke="#fbc02d" strokeWidth="2"
@@ -314,13 +339,13 @@ export default function FloorPlanPage() {
                     onClick={() => setSelectedRoom('office')} />
                   <text x="725" y="400" textAnchor="middle" className="text-sm font-semibold">Office</text>
 
-                  {/* Laundry */}
+                  {/* Utility Room */}
                   <rect x="650" y="460" width="150" height="60" fill="#b2dfdb" stroke="#00796b" strokeWidth="2"
                     className="cursor-pointer"
                     onMouseEnter={(e) => e.currentTarget.setAttribute('fill', '#80cbc4')}
                     onMouseLeave={(e) => e.currentTarget.setAttribute('fill', '#b2dfdb')}
-                    onClick={() => setSelectedRoom('laundry')} />
-                  <text x="725" y="490" textAnchor="middle" className="text-sm font-semibold">Laundry</text>
+                    onClick={() => setSelectedRoom('utility-room')} />
+                  <text x="725" y="490" textAnchor="middle" className="text-xs font-semibold">Utility</text>
 
                   {/* Dining */}
                   <rect x="200" y="340" width="200" height="120" fill="#e8f5e9" stroke="#388e3c" strokeWidth="2"
@@ -338,13 +363,13 @@ export default function FloorPlanPage() {
                     onClick={() => setSelectedRoom('garage')} />
                   <text x="525" y="430" textAnchor="middle" className="text-sm font-semibold">3 Car Garage</text>
 
-                  {/* CG Room */}
-                  <rect x="0" y="460" width="200" height="60" fill="#fff3e0" stroke="#f57c00" strokeWidth="2"
+                  {/* Den/Office */}
+                  <rect x="0" y="460" width="200" height="60" fill="#b2dfdb" stroke="#00796b" strokeWidth="2"
                     className="cursor-pointer"
-                    onMouseEnter={(e) => e.currentTarget.setAttribute('fill', '#ffe0b2')}
-                    onMouseLeave={(e) => e.currentTarget.setAttribute('fill', '#fff3e0')}
-                    onClick={() => setSelectedRoom('cg-room')} />
-                  <text x="100" y="490" textAnchor="middle" className="text-sm font-semibold">CG Room</text>
+                    onMouseEnter={(e) => e.currentTarget.setAttribute('fill', '#80cbc4')}
+                    onMouseLeave={(e) => e.currentTarget.setAttribute('fill', '#b2dfdb')}
+                    onClick={() => setSelectedRoom('den-office')} />
+                  <text x="100" y="490" textAnchor="middle" className="text-xs font-semibold">Den/Office</text>
                 </svg>
               </div>
               <p className="text-sm text-gray-600 mt-4">

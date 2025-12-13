@@ -4,7 +4,7 @@ export default function ScenariosPage() {
       id: 1,
       title: "Scenario 1: Direct Provider Lease (No Conversion)",
       priority: "HIGHEST",
-      description: "Find existing operational AFH providers who can lease the property as-is or with minimal modifications",
+      description: "Find existing operational AFH providers who can lease the property as-is or with minimal modifications. Property: 2,100 sq ft single-level home with 3 bedrooms, 2 bathrooms, built in 2005",
       pros: [
         "Fastest path to revenue (30-60 days) - Can start generating income quickly without waiting for conversion work",
         "No upfront conversion costs - Landlord invests $0-$5,000 maximum for minor repairs only",
@@ -51,7 +51,7 @@ export default function ScenariosPage() {
       id: 2,
       title: "Scenario 2: Minimal WABO Conversion + Provider Lease",
       priority: "RECOMMENDED",
-      description: "Convert property to meet minimum WABO permit requirements, then lease to provider",
+      description: "Convert property to meet minimum WABO permit requirements, then lease to provider. Property: 2,100 sq ft single-level home with 3 bedrooms, 2 bathrooms, great room with vaulted ceilings, patio with hot tub",
       pros: [
         "Property becomes 'turnkey' for providers - Ready for immediate AFH operations without additional conversion work needed",
         "Higher rent potential ($3,500-$5,000/month) - 40-100% higher than as-is properties, better return on investment",
@@ -98,7 +98,7 @@ export default function ScenariosPage() {
       id: 3,
       title: "Scenario 3: Full Conversion + Long-term Lease",
       priority: "OPTIMAL",
-      description: "Complete full AFH conversion with all amenities, then secure long-term lease with premium provider",
+      description: "Complete full AFH conversion with all amenities, then secure long-term lease with premium provider. Property: 2,100 sq ft single-level home (2005) with 3 bedrooms, 2 bathrooms, vaulted ceilings, skylights, territorial view",
       pros: [
         "Maximum rent potential ($5,000-$7,000/month) - Highest rental income, 100-180% higher than as-is properties",
         "Attracts premium providers with strong track records - Top-tier providers with multiple locations and excellent reputations",

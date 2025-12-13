@@ -4,7 +4,7 @@
 
 ### Complete AFH Property Analysis & Provider Search Platform
 
-**1713 Winterwood Dr, Centralia, WA** • 5-6 Bed Capacity • WABO-Ready
+**1713 Winterwood Drive, Centralia, WA 98531** • 3-4 Bed Capacity • WABO-Ready
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
@@ -25,7 +25,7 @@
 
 | **Address** | **Capacity** | **Square Footage** | **Status** |
 |------------|-------------|-------------------|-----------|
-| 1713 Winterwood Dr, Centralia, WA | 5-6 Beds | 3,000+ sq ft | WABO-Ready |
+| 1713 Winterwood Drive, Centralia, WA 98531 | 3-4 Beds | 2,100 sq ft | WABO-Ready |
 
 </div>
 
@@ -134,7 +134,7 @@ Compare three comprehensive approaches:
 - ✅ Clickable rooms with detailed information
 - ✅ Room-by-room compliance assessment
 - ✅ Modification requirements and costs
-- ✅ Capacity analysis (5-6 beds verified)
+- ✅ Capacity analysis (3-4 beds verified - 3 bedrooms + den/office option)
 
 ### 3. **Timeline & Budget** 📅
 
@@ -184,8 +184,11 @@ Ready-to-use templates for:
 | Feature | Details |
 |---------|---------|
 | 🏠 **Property Type** | Single-family home, ideal for AFH |
-| 📏 **Square Footage** | 3,000+ sq ft |
-| 🛏️ **Bed Capacity** | 5-6 beds (verified) |
+| 📏 **Square Footage** | 2,100 sq ft (single level) |
+| 🛏️ **Bed Capacity** | 3-4 beds (3 bedrooms, den/office convertible) |
+| 🏗️ **Year Built** | 2005 |
+| 📐 **Lot Size** | 0.32 Acres |
+| 🚗 **Parking** | 3-car attached garage + RV parking |
 | 🚿 **Bathrooms** | 2 (ADA modification ready) |
 | 🏘️ **Location** | Centralia, WA - Growing AFH market |
 | ✅ **Compliance Score** | 75% - Good foundation, needs modifications |

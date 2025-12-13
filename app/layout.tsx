@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AFH Property Advisor - 1713 Winterwood Dr",
+  title: "AFH Property Advisor - 1713 Winterwood Drive",
   description: "Find optimal AFH providers and plan property conversion for Adult Family Home operation",
 };
 

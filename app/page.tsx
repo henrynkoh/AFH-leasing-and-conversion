@@ -66,8 +66,8 @@ export default function Home() {
   ];
 
   const stats = [
-    { number: '5-6', label: 'Bed Capacity' },
-    { number: '3,000+', label: 'Square Feet' },
+    { number: '3-4', label: 'Bed Capacity' },
+    { number: '2,100', label: 'Square Feet' },
     { number: '$25K-$75K', label: 'Conversion Range' },
     { number: '90-180', label: 'Days Timeline' }
   ];
@@ -99,10 +99,10 @@ export default function Home() {
             {/* Main Heading */}
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                1713 Winterwood Dr
+                1713 Winterwood Drive
               </span>
               <br />
-              <span className="text-white">Centralia, WA</span>
+              <span className="text-white">Centralia, WA 98531</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-blue-100 mb-4 max-w-3xl mx-auto">
@@ -198,15 +198,22 @@ export default function Home() {
                   <div className="flex items-start gap-4">
                     <div className="text-3xl">✅</div>
                     <div>
-                      <h4 className="text-white font-semibold text-lg mb-1">5-6 Bed Capacity</h4>
-                      <p className="text-blue-200">Verified through detailed floor plan analysis</p>
+                      <h4 className="text-white font-semibold text-lg mb-1">3-4 Bed Capacity</h4>
+                      <p className="text-blue-200">3 bedrooms on main level, verified through floor plan analysis</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="text-3xl">✅</div>
                     <div>
-                      <h4 className="text-white font-semibold text-lg mb-1">3,000+ Square Feet</h4>
-                      <p className="text-blue-200">Spacious layout ideal for AFH operations</p>
+                      <h4 className="text-white font-semibold text-lg mb-1">2,100 Square Feet</h4>
+                      <p className="text-blue-200">Single-level layout ideal for AFH operations</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="text-3xl">✅</div>
+                    <div>
+                      <h4 className="text-white font-semibold text-lg mb-1">Built in 2005</h4>
+                      <p className="text-blue-200">Modern construction with vaulted ceilings and skylights</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -221,22 +228,22 @@ export default function Home() {
                   <div className="flex items-start gap-4">
                     <div className="text-3xl">✅</div>
                     <div>
-                      <h4 className="text-white font-semibold text-lg mb-1">Complete Analysis</h4>
-                      <p className="text-blue-200">Room-by-room compliance assessment included</p>
+                      <h4 className="text-white font-semibold text-lg mb-1">2 Full Bathrooms</h4>
+                      <p className="text-blue-200">Both on main level, ready for ADA modifications</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="text-3xl">✅</div>
                     <div>
-                      <h4 className="text-white font-semibold text-lg mb-1">Flexible Options</h4>
-                      <p className="text-blue-200">Three conversion scenarios to choose from</p>
+                      <h4 className="text-white font-semibold text-lg mb-1">3-Car Garage</h4>
+                      <p className="text-blue-200">Attached garage with RV parking available</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="text-3xl">✅</div>
                     <div>
-                      <h4 className="text-white font-semibold text-lg mb-1">Marketing Ready</h4>
-                      <p className="text-blue-200">Templates for 9 platforms included</p>
+                      <h4 className="text-white font-semibold text-lg mb-1">Special Features</h4>
+                      <p className="text-blue-200">Patio, hot tub/spa, territorial view, cul-de-sac location</p>
                     </div>
                   </div>
                 </div>
@@ -289,7 +296,7 @@ export default function Home() {
       <div className="relative py-12 bg-slate-900 border-t border-white/10">
         <div className="container mx-auto px-4 text-center">
           <p className="text-blue-200 mb-2">AFH Property Advisor</p>
-          <p className="text-blue-300/80 text-sm">1713 Winterwood Dr, Centralia, WA • Complete AFH Analysis Platform</p>
+          <p className="text-blue-300/80 text-sm">1713 Winterwood Drive, Centralia, WA 98531 • Complete AFH Analysis Platform</p>
         </div>
       </div>
     </div>

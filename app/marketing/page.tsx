@@ -7,16 +7,16 @@ export default function MarketingPage() {
       content: `🏠 WABO-READY AFH PROPERTY FOR LEASE - Centralia, WA
 
 📍 Location: 1713 Winterwood Dr, Centralia, WA
-📏 Property: 5-6 bed capacity Adult Family Home
+📏 Property: 3-4 bed capacity Adult Family Home
 ✅ Status: WABO permit-ready (or fully converted)
 
 PROPERTY HIGHLIGHTS:
-• Spacious 3,000+ sq ft single-family home
+• 2,100 sq ft single-level home (built 2005)
 • Ideal layout for AFH operation
-• 5-6 resident rooms available
-• Large common areas (Living, Dining, Den)
-• Outdoor patio space for residents
-• 3-car garage for storage
+• 3 bedrooms on main level (plus den/office convertible)
+• Large common areas (Great Room with vaulted ceilings, Living, Dining, Kitchen with eating space)
+• Outdoor patio with territorial view and hot tub/spa
+• 3-car attached garage with RV parking
 • Prime Centralia location
 
 CONVERSION STATUS:
@@ -43,7 +43,7 @@ Interested? Message me for floor plan, photos, and detailed information!`
     },
     afhLocatorListing: {
       title: "AFH Locator Website Listing",
-      content: `PROPERTY TITLE: WABO-Ready AFH Property - Centralia, WA - 5-6 Bed Capacity
+      content: `PROPERTY TITLE: WABO-Ready AFH Property - Centralia, WA - 3-4 Bed Capacity
 
 PROPERTY DESCRIPTION:
 
@@ -52,17 +52,17 @@ Available for lease: Prime Adult Family Home property in Centralia, Washington. 
 PROPERTY DETAILS:
 • Address: 1713 Winterwood Dr, Centralia, WA
 • Property Type: Single-family home, AFH-converted or conversion-ready
-• Bed Capacity: 5-6 beds
-• Square Footage: Approximately 3,000+ sq ft
+• Bed Capacity: 3-4 beds (3 bedrooms + den/office option)
+• Square Footage: 2,100 sq ft (single level, built 2005)
 • Layout: Open floor plan with dedicated resident rooms and common areas
 
 FEATURES:
-✓ Multiple resident rooms (Primary Bedroom + 2 additional bedrooms + flexible space)
+✓ Multiple resident rooms (Primary Bedroom with walk-in closet + 2 additional bedrooms + Den/Office convertible)
 ✓ Two full bathrooms (ADA-compliant or ready for conversion)
-✓ Large living room and den for common activities
+✓ Great room with vaulted ceilings and skylights, living room, and den/office
 ✓ Dedicated dining area
-✓ Fully equipped kitchen
-✓ Outdoor patio space
+✓ Kitchen with eating space (all appliances included)
+✓ Patio with territorial view and hot tub/spa
 ✓ 3-car garage for storage and parking
 ✓ Office space for administrative use
 ✓ Laundry facilities
@@ -103,7 +103,7 @@ Please contact for:
     },
     emailTemplate: {
       title: "Email Outreach Template for Providers",
-      content: `Subject: AFH Property Opportunity - Centralia, WA - 5-6 Bed Capacity
+      content: `Subject: AFH Property Opportunity - Centralia, WA - 3-4 Bed Capacity
 
 Dear [Provider Name],
 
@@ -111,16 +111,22 @@ I hope this message finds you well. I'm reaching out because I have a property t
 
 PROPERTY OVERVIEW:
 • Location: 1713 Winterwood Dr, Centralia, WA
-• Capacity: 5-6 beds
+• Capacity: 3-4 beds (3 bedrooms on main level + den/office convertible)
 • Status: [Conversion-ready / WABO-compliant / Fully converted]
-• Layout: Ideal for AFH with dedicated resident rooms and common areas
+• Layout: Single-level home ideal for AFH with dedicated resident rooms and common areas
+• Year Built: 2005
+• Special Features: Vaulted ceilings, skylights, territorial view, hot tub/spa, cul-de-sac location
 
 WHY THIS PROPERTY:
 This property offers an excellent opportunity for AFH providers looking to establish or expand operations in Centralia. The floor plan is well-suited for resident care, with:
-- Multiple resident rooms
-- Large common areas for activities
-- Outdoor space for residents
-- Adequate storage and parking
+- 3 bedrooms on main level (Primary bedroom with walk-in closet and bath off primary, plus 2 additional bedrooms)
+- Great room with vaulted ceilings and skylights (excellent natural light)
+- Multiple common areas (Great room, Living room, Dining room, Kitchen with eating space)
+- Den/Office space (can serve as 4th resident room or administrative space)
+- Patio with territorial view and hot tub/spa (highly valued by residents)
+- 3-car attached garage with RV parking (excellent storage)
+- Single-level design (excellent for accessibility)
+- Cul-de-sac location (quiet, safe environment)
 
 FLEXIBLE ARRANGEMENTS:
 I understand that finding the right property can be challenging. I'm open to discussing:
@@ -149,14 +155,15 @@ OPENING (30 seconds):
 "Hi [Provider Name], this is [Your Name]. I'm calling about a property I have available for lease that might be perfect for your AFH operations. Do you have a few minutes to discuss?"
 
 PROPERTY INTRODUCTION (1-2 minutes):
-"I have a property at 1713 Winterwood Dr in Centralia that's ideally suited for an Adult Family Home. It's a spacious single-family home with capacity for 5-6 residents. The layout is excellent for AFH operations with multiple resident rooms and large common areas."
+"I have a property at 1713 Winterwood Drive in Centralia that's ideally suited for an Adult Family Home. It's a 2,100 square foot single-level home built in 2005 with capacity for 3-4 residents. The layout is excellent for AFH operations with 3 bedrooms on the main level, great room with vaulted ceilings and skylights, and multiple common areas."
 
 KEY POINTS TO MENTION:
-• Location: Centralia, WA
-• Capacity: 5-6 beds
+• Location: Centralia, WA 98531 (cul-de-sac location)
+• Capacity: 3-4 beds (3 bedrooms + den/office option)
 • Status: [Ready for conversion / WABO-compliant / Fully converted]
-• Size: 3,000+ sq ft
-• Features: Multiple rooms, common areas, outdoor space, garage
+• Size: 2,100 sq ft (single level, all on main floor)
+• Year Built: 2005 (modern construction)
+• Features: Primary bedroom with walk-in closet and bath off primary, great room with vaulted ceilings, skylights, patio with territorial view and hot tub/spa, 3-car attached garage, partially fenced yard
 
 ADDRESS CONCERNS (2-3 minutes):
 Listen for their questions and concerns:
