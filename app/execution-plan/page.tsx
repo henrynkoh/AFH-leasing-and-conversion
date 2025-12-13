@@ -909,7 +909,7 @@ export default function ExecutionPlanPage() {
                     {phase.phase}
                   </span>
                   <h3 className="text-xl font-semibold">{phase.name}</h3>
-                  <span className="text-sm text-gray-600">{phase.duration}</span>
+                  <span className="text-base font-semibold text-gray-700">{phase.duration}</span>
                 </div>
                 <p className="text-gray-700">{phase.description}</p>
               </div>
