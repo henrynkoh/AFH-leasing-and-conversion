@@ -329,21 +329,21 @@ FOLLOW-UP:
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-blue-500">
                   <h3 className="text-xl font-bold mb-3">{scenario.title}</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <div className="text-sm text-gray-600 mb-1">Marketing Focus</div>
-                      <div className="font-semibold">{scenario.marketingFocus}</div>
+                    <div className="bg-white p-4 rounded-lg border-2 border-gray-300">
+                      <div className="text-base font-bold text-black mb-2">Marketing Focus</div>
+                      <div className="font-bold text-lg text-black">{scenario.marketingFocus}</div>
                     </div>
-                    <div>
-                      <div className="text-sm text-gray-600 mb-1">Key Message</div>
-                      <div className="font-semibold">{scenario.message}</div>
+                    <div className="bg-white p-4 rounded-lg border-2 border-gray-300">
+                      <div className="text-base font-bold text-black mb-2">Key Message</div>
+                      <div className="font-bold text-lg text-black">{scenario.message}</div>
                     </div>
-                    <div>
+                    <div className="bg-white p-4 rounded-lg border-2 border-blue-300">
                       <div className="text-base font-bold text-black mb-2">Timeline</div>
                       <div className="font-bold text-lg text-blue-700">{scenario.timeline}</div>
                     </div>
-                    <div>
-                      <div className="text-sm text-gray-600 mb-1">Marketing Budget</div>
-                      <div className="font-semibold text-blue-600">{scenario.budget}</div>
+                    <div className="bg-white p-4 rounded-lg border-2 border-green-300">
+                      <div className="text-base font-bold text-black mb-2">Marketing Budget</div>
+                      <div className="font-bold text-lg text-green-700">{scenario.budget}</div>
                     </div>
                   </div>
                 </div>
