@@ -955,11 +955,11 @@ export default function ExecutionPlanPage() {
           <h2 className="text-2xl font-bold mb-4">시방서 (Specifications)</h2>
           <div className="space-y-6">
             {specifications.sections.map((section, index) => (
-              <div key={index} className="border-l-4 border-green-500 pl-4 bg-green-50 p-4 rounded-r-lg mb-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{section.section}</h3>
-                <ul className="list-disc list-inside space-y-2 text-base text-gray-900">
+              <div key={index} className="border-l-4 border-green-600 pl-5 bg-green-100 p-5 rounded-r-lg mb-5">
+                <h3 className="text-2xl font-bold text-black mb-4">{section.section}</h3>
+                <ul className="list-disc list-inside space-y-3 text-lg text-black">
                   {section.items.map((item, i) => (
-                    <li key={i} className="leading-relaxed">{item}</li>
+                    <li key={i} className="leading-relaxed font-semibold">{item}</li>
                   ))}
                 </ul>
               </div>
@@ -989,8 +989,8 @@ export default function ExecutionPlanPage() {
           </div>
           <div className="space-y-6">
             {dailyTasks[selectedPhase].days.map((day, dayIndex) => (
-              <div key={dayIndex} className="border-2 border-gray-300 rounded-lg p-5 bg-gray-50 shadow-md mb-4">
-                <h3 className="text-xl font-bold mb-4 text-blue-700 bg-white px-4 py-2 rounded">{day.day}</h3>
+              <div key={dayIndex} className="border-2 border-gray-400 rounded-lg p-6 bg-gray-100 shadow-lg mb-5">
+                <h3 className="text-2xl font-bold mb-5 text-blue-800 bg-white px-5 py-3 rounded-lg border-2 border-blue-500">{day.day}</h3>
                 <div className="space-y-4">
                   {day.tasks.map((task, taskIndex) => (
                     <div key={taskIndex} className="bg-white p-4 rounded border-l-4 border-blue-500">
