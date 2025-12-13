@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 export default function TimelinePage() {
-  const [selectedScenario, setSelectedScenario] = useState<'minimal' | 'full'>('minimal');
+  const [selectedScenario, setSelectedScenario] = useState<'current' | '5bed' | '6bed' | '8bed'>('current');
 
   const minimalTimeline = [
     {
@@ -124,7 +124,113 @@ export default function TimelinePage() {
     }
   ];
 
-  const timeline = selectedScenario === 'minimal' ? minimalTimeline : fullTimeline;
+  // Current status timeline (no conversion, just provider search)
+  const currentTimeline = [
+    {
+      phase: 'Phase 1: Research & Preparation (Days 1-14)',
+      days: 14,
+      activities: [
+        { day: '1-7', activity: 'Research AFH providers in Centralia/Chehalis area using AFH locator, identify providers with 3-4 beds who might want to expand, research provider backgrounds and track records, compile list of 15-20 potential providers', cost: 0, landlord: 100, tenant: 0 },
+        { day: '8-14', activity: 'Join Facebook AFH communities, create property listing materials, prepare floor plan and property description, set up tracking spreadsheet for inquiries', cost: 0, landlord: 100, tenant: 0 }
+      ]
+    },
+    {
+      phase: 'Phase 2: Marketing & Outreach (Days 15-45)',
+      days: 31,
+      activities: [
+        { day: '15-21', activity: 'Post property listings on AFH locator websites and Facebook groups, create marketing materials with photos and floor plan', cost: 200, landlord: 100, tenant: 0 },
+        { day: '22-35', activity: 'Contact identified providers directly via phone and email, send comprehensive property information package, schedule property viewings for interested parties', cost: 0, landlord: 100, tenant: 0 },
+        { day: '36-45', activity: 'Follow up on all inquiries, conduct property tours, answer provider questions', cost: 0, landlord: 100, tenant: 0 }
+      ]
+    },
+    {
+      phase: 'Phase 3: Provider Screening (Days 46-60)',
+      days: 15,
+      activities: [
+        { day: '46-55', activity: 'Screen interested providers using comprehensive questionnaire, check references from previous landlords, verify AFH licenses and credentials, evaluate financial stability', cost: 0, landlord: 100, tenant: 0 },
+        { day: '56-60', activity: 'Conduct background checks, verify business licenses, review financial statements', cost: 500, landlord: 100, tenant: 0 }
+      ]
+    },
+    {
+      phase: 'Phase 4: Negotiation & Lease Execution (Days 61-90)',
+      days: 30,
+      activities: [
+        { day: '61-75', activity: 'Negotiate lease terms including rent amount ($2,000-$3,000/month), lease duration (5-10 years), conversion responsibilities, maintenance and insurance requirements', cost: 0, landlord: 50, tenant: 50 },
+        { day: '76-85', activity: 'Legal review of lease agreement, finalize all terms and conditions', cost: 1000, landlord: 100, tenant: 0 },
+        { day: '86-90', activity: 'Execute lease documents, coordinate property handover, set up rent collection, begin lease term', cost: 500, landlord: 100, tenant: 0 }
+      ]
+    }
+  ];
+
+  // 5-bed conversion timeline
+  const fiveBedTimeline = minimalTimeline; // Use minimal timeline as base for 5-bed
+
+  // 6-bed conversion timeline  
+  const sixBedTimeline = fullTimeline; // Use full timeline as base for 6-bed
+
+  // 8-bed conversion timeline (most comprehensive)
+  const eightBedTimeline = [
+    {
+      phase: 'Phase 1: Planning, Design & Permits (Days 1-45)',
+      days: 45,
+      activities: [
+        { day: '1-10', activity: 'Hire architect specializing in AFH and garage conversions, coordinate with structural engineer for garage conversion feasibility assessment', cost: 8000, landlord: 100, tenant: 0 },
+        { day: '11-30', activity: 'Complete detailed architectural drawings for main structure and garage conversion, coordinate permit applications including zoning for garage conversion', cost: 0, landlord: 100, tenant: 0 },
+        { day: '31-40', activity: 'Submit comprehensive permit applications including WABO, building, fire, zoning, and special permits for garage conversion', cost: 4000, landlord: 100, tenant: 0 },
+        { day: '41-45', activity: 'Permit review and approval process, coordinate with all departments, obtain all necessary approvals including garage conversion approval', cost: 0, landlord: 100, tenant: 0 }
+      ]
+    },
+    {
+      phase: 'Phase 2: Garage Conversion & Structural (Days 46-120)',
+      days: 75,
+      activities: [
+        { day: '46-70', activity: 'Complete garage conversion including structural modifications, insulation, HVAC, electrical, and plumbing for 2 resident rooms', cost: 25000, landlord: 80, tenant: 20 },
+        { day: '71-90', activity: 'Create 2 resident rooms in converted garage space with full AFH compliance, install all safety systems', cost: 15000, landlord: 70, tenant: 30 },
+        { day: '91-110', activity: 'Complete structural modifications to main structure, upgrade electrical and HVAC systems for 8-bed capacity', cost: 22000, landlord: 80, tenant: 20 },
+        { day: '111-120', activity: 'Address parking requirements, create alternative parking solutions, complete all structural work', cost: 5000, landlord: 100, tenant: 0 }
+      ]
+    },
+    {
+      phase: 'Phase 3: Bonus Room & Main Structure Conversion (Days 121-150)',
+      days: 30,
+      activities: [
+        { day: '121-135', activity: 'Convert bonus room to 3 resident rooms, optimize all existing space for maximum capacity, create dedicated caregiver room', cost: 18000, landlord: 75, tenant: 25 },
+        { day: '136-150', activity: 'Complete all bathroom modifications for 8-bed capacity, install comprehensive handrails and call systems in all 8 rooms', cost: 25000, landlord: 75, tenant: 25 }
+      ]
+    },
+    {
+      phase: 'Phase 4: Common Areas & Finishing (Days 151-180)',
+      days: 30,
+      activities: [
+        { day: '151-165', activity: 'Complete common area modifications ensuring adequate space for 8 residents, finish kitchen and dining area with commercial-grade equipment', cost: 15000, landlord: 70, tenant: 30 },
+        { day: '166-180', activity: 'Complete all finishing work including flooring, paint, fixtures, install all safety systems for 8-bed capacity', cost: 10000, landlord: 70, tenant: 30 }
+      ]
+    },
+    {
+      phase: 'Phase 5: Final Inspections & Certification (Days 181-210)',
+      days: 30,
+      activities: [
+        { day: '181-190', activity: 'Complete WABO preliminary inspection, fire department, building department, and zoning final inspections', cost: 2000, landlord: 100, tenant: 0 },
+        { day: '191-200', activity: 'Address all inspection corrections promptly and professionally', cost: 8000, landlord: 75, tenant: 25 },
+        { day: '201-210', activity: 'Obtain final WABO certification and all necessary permits including garage conversion approval, document all certifications', cost: 2000, landlord: 100, tenant: 0 }
+      ]
+    },
+    {
+      phase: 'Phase 6: Premium Provider Search (Days 211-240)',
+      days: 30,
+      activities: [
+        { day: '211-220', activity: 'Create professional marketing package with high-quality photography, detailed floor plans including garage conversion', cost: 3000, landlord: 100, tenant: 0 },
+        { day: '221-230', activity: 'List property on premium AFH platforms, commercial real estate sites, target large-scale providers', cost: 1000, landlord: 100, tenant: 0 },
+        { day: '231-240', activity: 'Screen and interview large-scale providers, negotiate long-term lease (10-15 years), finalize lease agreement', cost: 3000, landlord: 100, tenant: 0 }
+      ]
+    }
+  ];
+
+  const timeline = 
+    selectedScenario === 'current' ? currentTimeline :
+    selectedScenario === '5bed' ? fiveBedTimeline :
+    selectedScenario === '6bed' ? sixBedTimeline :
+    eightBedTimeline;
 
   const calculateTotals = () => {
     let totalCost = 0;
@@ -151,27 +257,58 @@ export default function TimelinePage() {
         <h1 className="text-4xl font-bold text-gray-900 mb-2">Timeline & Budget</h1>
         <p className="text-gray-600 mb-8">Detailed daily breakdown of activities, costs, and cost-sharing</p>
 
-        <div className="mb-6 flex gap-4">
-          <button
-            onClick={() => setSelectedScenario('minimal')}
-            className={`px-6 py-3 rounded-lg font-semibold ${
-              selectedScenario === 'minimal'
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-gray-700 border-2 border-gray-300'
-            }`}
-          >
-            Minimal WABO Conversion
-          </button>
-          <button
-            onClick={() => setSelectedScenario('full')}
-            className={`px-6 py-3 rounded-lg font-semibold ${
-              selectedScenario === 'full'
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-gray-700 border-2 border-gray-300'
-            }`}
-          >
-            Full AFH Conversion
-          </button>
+        <div className="mb-6">
+          <h2 className="text-xl font-semibold mb-4">Select Conversion Scenario:</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <button
+              onClick={() => setSelectedScenario('current')}
+              className={`px-6 py-4 rounded-lg font-semibold transition-all ${
+                selectedScenario === 'current'
+                  ? 'bg-blue-600 text-white shadow-lg scale-105'
+                  : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-blue-400'
+              }`}
+            >
+              <div className="text-lg font-bold">Current Status</div>
+              <div className="text-sm mt-1">3 Beds (No Conversion)</div>
+              <div className="text-xs mt-1 text-gray-500">30-90 days</div>
+            </button>
+            <button
+              onClick={() => setSelectedScenario('5bed')}
+              className={`px-6 py-4 rounded-lg font-semibold transition-all ${
+                selectedScenario === '5bed'
+                  ? 'bg-green-600 text-white shadow-lg scale-105'
+                  : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-green-400'
+              }`}
+            >
+              <div className="text-lg font-bold">Option 1: 5 Beds</div>
+              <div className="text-sm mt-1">$35K-$50K</div>
+              <div className="text-xs mt-1 text-gray-500">90-120 days</div>
+            </button>
+            <button
+              onClick={() => setSelectedScenario('6bed')}
+              className={`px-6 py-4 rounded-lg font-semibold transition-all ${
+                selectedScenario === '6bed'
+                  ? 'bg-purple-600 text-white shadow-lg scale-105'
+                  : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-purple-400'
+              }`}
+            >
+              <div className="text-lg font-bold">Option 2: 6 Beds</div>
+              <div className="text-sm mt-1">$50K-$70K</div>
+              <div className="text-xs mt-1 text-gray-500">120-150 days</div>
+            </button>
+            <button
+              onClick={() => setSelectedScenario('8bed')}
+              className={`px-6 py-4 rounded-lg font-semibold transition-all ${
+                selectedScenario === '8bed'
+                  ? 'bg-orange-600 text-white shadow-lg scale-105'
+                  : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-orange-400'
+              }`}
+            >
+              <div className="text-lg font-bold">Option 3: 8 Beds</div>
+              <div className="text-sm mt-1">$75K-$100K+</div>
+              <div className="text-xs mt-1 text-gray-500">150-210 days</div>
+            </button>
+          </div>
         </div>
 
         <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg mb-8">
