@@ -1,0 +1,38 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AFH Property Advisor App
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📱 Access on Any Device:
+
+GitHub Repository:
+https://github.com/henrynkoh/AFH-leasing-and-conversion
+
+🔗 To Deploy & Get Live Link:
+
+1. Go to: https://vercel.com
+2. Sign in with GitHub
+3. Click "Add New Project"
+4. Import: henrynkoh/AFH-leasing-and-conversion
+5. Click "Deploy"
+6. Get your live link (works on all devices!)
+
+📋 Or use command line:
+cd "/Users/henryoh/Documents/3571 Cassie Dr/afh-property-advisor"
+vercel login
+vercel --prod
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ App Features:
+• 4 Conversion Scenarios (3-8 beds)
+• Interactive Floor Plan Analysis
+• Detailed Timeline & Budget Planning
+• Marketing Materials (9 platforms)
+• Provider Search Resources
+• Complete Execution Plans
+• Phase 1 Implementation Guide
+
+🏠 Property: 1713 Winterwood Drive, Centralia, WA
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
