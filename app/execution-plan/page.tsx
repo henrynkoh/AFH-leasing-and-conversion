@@ -922,28 +922,28 @@ export default function ExecutionPlanPage() {
           <h2 className="text-2xl font-bold mb-4">시공계획서 (Construction Schedule)</h2>
           <div className="space-y-6">
             {constructionSchedule.phases.map((phase, index) => (
-              <div key={index} className="border rounded-lg p-4">
-                <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-lg font-semibold">{phase.phase}</h3>
-                  <div className="text-sm text-gray-600">
+              <div key={index} className="border-2 border-gray-400 rounded-lg p-6 bg-gray-100 shadow-lg mb-5">
+                <div className="flex justify-between items-start mb-5">
+                  <h3 className="text-2xl font-bold text-black">{phase.phase}</h3>
+                  <div className="text-lg font-bold text-black bg-white px-4 py-2 rounded-lg border-2 border-gray-400">
                     {phase.startDate} - {phase.endDate}
                   </div>
                 </div>
-                <div className="mb-3">
-                  <div className="text-sm text-gray-600 mb-1">Responsible:</div>
-                  <div className="font-semibold">{phase.responsible}</div>
+                <div className="mb-5 bg-white p-4 rounded-lg border-2 border-gray-300">
+                  <div className="text-lg font-bold text-black mb-2">Responsible:</div>
+                  <div className="font-bold text-xl text-black">{phase.responsible}</div>
                 </div>
-                <div className="mb-3">
-                  <div className="text-sm text-gray-600 mb-2">Activities:</div>
-                  <ul className="list-disc list-inside space-y-1 text-sm">
+                <div className="mb-5 bg-white p-4 rounded-lg border-2 border-gray-300">
+                  <div className="text-lg font-bold text-black mb-3">Activities:</div>
+                  <ul className="list-disc list-inside space-y-2 text-lg text-black">
                     {phase.activities.map((activity, i) => (
-                      <li key={i}>{activity}</li>
+                      <li key={i} className="leading-relaxed font-semibold">{activity}</li>
                     ))}
                   </ul>
                 </div>
-                <div>
-                  <div className="text-sm text-gray-600 mb-1">Deliverables:</div>
-                  <div className="text-sm font-semibold">{phase.deliverables.join(", ")}</div>
+                <div className="bg-white p-4 rounded-lg border-2 border-gray-300">
+                  <div className="text-lg font-bold text-black mb-2">Deliverables:</div>
+                  <div className="text-lg font-bold text-black leading-relaxed">{phase.deliverables.join(", ")}</div>
                 </div>
               </div>
             ))}
@@ -991,31 +991,31 @@ export default function ExecutionPlanPage() {
             {dailyTasks[selectedPhase].days.map((day, dayIndex) => (
               <div key={dayIndex} className="border-2 border-gray-400 rounded-lg p-6 bg-gray-100 shadow-lg mb-5">
                 <h3 className="text-2xl font-bold mb-5 text-blue-800 bg-white px-5 py-3 rounded-lg border-2 border-blue-500">{day.day}</h3>
-                <div className="space-y-4">
+                <div className="space-y-5">
                   {day.tasks.map((task, taskIndex) => (
-                    <div key={taskIndex} className="bg-white p-4 rounded border-l-4 border-blue-500">
-                      <div className="font-semibold text-lg mb-2">{task.task}</div>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
-                        <div>
-                          <div className="text-gray-600 font-semibold">Who:</div>
-                          <div>{task.who}</div>
+                    <div key={taskIndex} className="bg-white p-6 rounded-lg border-l-4 border-blue-600 shadow-lg mb-5">
+                      <div className="font-bold text-2xl mb-4 text-black">{task.task}</div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-gray-100 p-4 rounded-lg border-2 border-gray-300">
+                          <div className="text-black font-bold mb-2 text-lg">Who:</div>
+                          <div className="font-bold text-lg text-black">{task.who}</div>
                         </div>
-                        <div>
-                          <div className="text-gray-600 font-semibold">Where:</div>
-                          <div>{task.where}</div>
+                        <div className="bg-gray-100 p-4 rounded-lg border-2 border-gray-300">
+                          <div className="text-black font-bold mb-2 text-lg">Where:</div>
+                          <div className="font-bold text-lg text-black">{task.where}</div>
                         </div>
-                        <div>
-                          <div className="text-gray-600 font-semibold">Contact:</div>
-                          <div>{task.contact}</div>
+                        <div className="bg-gray-100 p-4 rounded-lg border-2 border-gray-300">
+                          <div className="text-black font-bold mb-2 text-lg">Contact:</div>
+                          <div className="font-bold text-lg text-black">{task.contact}</div>
                         </div>
-                        <div>
-                          <div className="text-gray-600 font-semibold">Deliverable:</div>
-                          <div className="font-semibold text-green-700">{task.deliverable}</div>
+                        <div className="bg-green-100 p-4 rounded-lg border-2 border-green-500">
+                          <div className="text-black font-bold mb-2 text-lg">Deliverable:</div>
+                          <div className="font-bold text-xl text-green-800">{task.deliverable}</div>
                         </div>
                       </div>
-                      <div className="mt-3 p-3 bg-blue-50 rounded border">
-                        <div className="text-gray-600 font-semibold mb-1">Script:</div>
-                        <div className="text-sm italic">"{task.script}"</div>
+                      <div className="mt-5 p-5 bg-blue-100 rounded-lg border-2 border-blue-500">
+                        <div className="text-black font-bold mb-3 text-xl">Script:</div>
+                        <div className="text-lg font-semibold text-black leading-relaxed">"{task.script}"</div>
                       </div>
                     </div>
                   ))}
@@ -1029,37 +1029,37 @@ export default function ExecutionPlanPage() {
         <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
           <h2 className="text-2xl font-bold mb-4">Key Contacts (주요 연락처)</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="border rounded-lg p-4">
-              <h3 className="font-semibold text-lg mb-2">{contacts.cityOfCentralia.name}</h3>
-              <div className="text-sm space-y-1">
-                <div><strong>Address:</strong> {contacts.cityOfCentralia.address}</div>
-                <div><strong>Phone:</strong> {contacts.cityOfCentralia.phone}</div>
-                <div><strong>Email:</strong> {contacts.cityOfCentralia.email}</div>
-                <div><strong>Purpose:</strong> {contacts.cityOfCentralia.purpose}</div>
+            <div className="border-2 border-gray-400 rounded-lg p-6 bg-white shadow-lg">
+              <h3 className="font-bold text-2xl mb-4 text-black">{contacts.cityOfCentralia.name}</h3>
+              <div className="text-lg space-y-3">
+                <div><strong className="text-black text-xl">Address:</strong> <span className="font-bold text-lg text-black">{contacts.cityOfCentralia.address}</span></div>
+                <div><strong className="text-black text-xl">Phone:</strong> <span className="font-bold text-lg text-black">{contacts.cityOfCentralia.phone}</span></div>
+                <div><strong className="text-black text-xl">Email:</strong> <span className="font-bold text-lg text-black">{contacts.cityOfCentralia.email}</span></div>
+                <div><strong className="text-black text-xl">Purpose:</strong> <span className="font-bold text-lg text-black">{contacts.cityOfCentralia.purpose}</span></div>
               </div>
             </div>
-            <div className="border rounded-lg p-4">
-              <h3 className="font-semibold text-lg mb-2">{contacts.fireDepartment.name}</h3>
-              <div className="text-sm space-y-1">
-                <div><strong>Address:</strong> {contacts.fireDepartment.address}</div>
-                <div><strong>Phone:</strong> {contacts.fireDepartment.phone}</div>
-                <div><strong>Email:</strong> {contacts.fireDepartment.email}</div>
-                <div><strong>Purpose:</strong> {contacts.fireDepartment.purpose}</div>
+            <div className="border-2 border-gray-400 rounded-lg p-6 bg-white shadow-lg">
+              <h3 className="font-bold text-2xl mb-4 text-black">{contacts.fireDepartment.name}</h3>
+              <div className="text-lg space-y-3">
+                <div><strong className="text-black text-xl">Address:</strong> <span className="font-bold text-lg text-black">{contacts.fireDepartment.address}</span></div>
+                <div><strong className="text-black text-xl">Phone:</strong> <span className="font-bold text-lg text-black">{contacts.fireDepartment.phone}</span></div>
+                <div><strong className="text-black text-xl">Email:</strong> <span className="font-bold text-lg text-black">{contacts.fireDepartment.email}</span></div>
+                <div><strong className="text-black text-xl">Purpose:</strong> <span className="font-bold text-lg text-black">{contacts.fireDepartment.purpose}</span></div>
               </div>
             </div>
-            <div className="border rounded-lg p-4">
-              <h3 className="font-semibold text-lg mb-2">{contacts.dshs.name}</h3>
-              <div className="text-sm space-y-1">
-                <div><strong>Phone:</strong> {contacts.dshs.phone}</div>
-                <div><strong>Website:</strong> {contacts.dshs.website}</div>
-                <div><strong>Purpose:</strong> {contacts.dshs.purpose}</div>
+            <div className="border-2 border-gray-400 rounded-lg p-6 bg-white shadow-lg">
+              <h3 className="font-bold text-2xl mb-4 text-black">{contacts.dshs.name}</h3>
+              <div className="text-lg space-y-3">
+                <div><strong className="text-black text-xl">Phone:</strong> <span className="font-bold text-lg text-black">{contacts.dshs.phone}</span></div>
+                <div><strong className="text-black text-xl">Website:</strong> <span className="font-bold text-lg text-black">{contacts.dshs.website}</span></div>
+                <div><strong className="text-black text-xl">Purpose:</strong> <span className="font-bold text-lg text-black">{contacts.dshs.purpose}</span></div>
               </div>
             </div>
-            <div className="border rounded-lg p-4">
-              <h3 className="font-semibold text-lg mb-2">{contacts.wabo.name}</h3>
-              <div className="text-sm space-y-1">
-                <div><strong>Website:</strong> {contacts.wabo.website}</div>
-                <div><strong>Purpose:</strong> {contacts.wabo.purpose}</div>
+            <div className="border-2 border-gray-400 rounded-lg p-6 bg-white shadow-lg">
+              <h3 className="font-bold text-2xl mb-4 text-black">{contacts.wabo.name}</h3>
+              <div className="text-lg space-y-3">
+                <div><strong className="text-black text-xl">Website:</strong> <span className="font-bold text-lg text-black">{contacts.wabo.website}</span></div>
+                <div><strong className="text-black text-xl">Purpose:</strong> <span className="font-bold text-lg text-black">{contacts.wabo.purpose}</span></div>
               </div>
             </div>
           </div>
