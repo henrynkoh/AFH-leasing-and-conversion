@@ -872,27 +872,27 @@ export default function ExecutionPlanPage() {
           <h2 className="text-2xl font-bold mb-4 text-red-700">Basic Plan (기본 계획)</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-              <div className="text-sm font-bold text-red-700 mb-1">Project Name</div>
+              <div className="text-sm font-bold text-black mb-1">Project Name</div>
               <div className="font-bold text-lg text-red-900">{basicPlan.projectName}</div>
             </div>
             <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-              <div className="text-sm font-bold text-red-700 mb-1">Target Capacity</div>
+              <div className="text-sm font-bold text-black mb-1">Target Capacity</div>
               <div className="font-bold text-lg text-red-900">{basicPlan.targetCapacity}</div>
             </div>
             <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-              <div className="text-sm font-bold text-red-700 mb-1">Total Timeline</div>
+              <div className="text-sm font-bold text-black mb-1">Total Timeline</div>
               <div className="font-bold text-lg text-red-900">{basicPlan.totalTimeline}</div>
             </div>
             <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-              <div className="text-sm font-bold text-red-700 mb-1">Total Budget</div>
+              <div className="text-sm font-bold text-black mb-1">Total Budget</div>
               <div className="font-bold text-lg text-red-900">{basicPlan.totalBudget}</div>
             </div>
             <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-              <div className="text-sm font-bold text-red-700 mb-1">Location</div>
+              <div className="text-sm font-bold text-black mb-1">Location</div>
               <div className="font-bold text-red-900">{basicPlan.location}</div>
             </div>
             <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-              <div className="text-sm font-bold text-red-700 mb-1">Jurisdiction</div>
+              <div className="text-sm font-bold text-black mb-1">Jurisdiction</div>
               <div className="font-bold text-red-900">{basicPlan.jurisdiction}</div>
             </div>
           </div>
