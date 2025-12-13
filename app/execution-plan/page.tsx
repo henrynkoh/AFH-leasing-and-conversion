@@ -1389,6 +1389,482 @@ export default function ExecutionPlanPage() {
           })}
         </div>
 
+        {/* 1단계 추진안 - Phase 1 Implementation Plan */}
+        <div id="phase1-implementation" className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-lg shadow-xl p-8 mb-8 border-4 border-purple-400">
+          <h2 className="text-4xl font-bold mb-4 text-purple-900">1단계 추진안</h2>
+          <h3 className="text-3xl font-bold mb-6 text-purple-800">Phase 1 Implementation Plan - Detailed Floor Plan Modifications</h3>
+          <p className="text-xl text-gray-800 mb-8 font-semibold">Comprehensive step-by-step implementation guide for converting current floor plan to future state with all required modifications</p>
+
+          {/* Current vs Future State Comparison */}
+          <div className="bg-white rounded-lg p-6 mb-8 border-2 border-purple-300 shadow-lg">
+            <h4 className="text-2xl font-bold mb-4 text-black">Current State vs Future State Comparison</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-red-50 p-5 rounded-lg border-2 border-red-300">
+                <h5 className="text-xl font-bold mb-3 text-red-900">Current State (Before)</h5>
+                <ul className="space-y-2 text-lg text-black font-semibold">
+                  <li>• Office: Standard size</li>
+                  <li>• Laundry: Standard size</li>
+                  <li>• Primary Bath: Full size</li>
+                  <li>• Dining: Separate dining room</li>
+                  <li>• Primary Bedroom: Full size, direct access</li>
+                  <li>• No Caregiver Room (CG Room)</li>
+                </ul>
+              </div>
+              <div className="bg-green-50 p-5 rounded-lg border-2 border-green-300">
+                <h5 className="text-xl font-bold mb-3 text-green-900">Future State (After)</h5>
+                <ul className="space-y-2 text-lg text-black font-semibold">
+                  <li>• Office: Enlarged (meets AFH code minimum)</li>
+                  <li>• Laundry: Reduced (meets AFH code minimum)</li>
+                  <li>• Primary Bath: Reduced (space for CG room)</li>
+                  <li>• Dining: Converted to Private Resident Room</li>
+                  <li>• Primary Bedroom: Reduced (corridor for CG room access)</li>
+                  <li>• CG Room (Caregiver Room): New room created</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Detailed Modification Steps */}
+          <div className="space-y-8">
+            {/* Step 1: Office Enlargement */}
+            <div className="bg-white rounded-lg p-6 border-2 border-blue-400 shadow-lg">
+              <h4 className="text-2xl font-bold mb-4 text-black">Step 1: Office Enlargement</h4>
+              <div className="bg-blue-50 p-4 rounded-lg mb-4">
+                <p className="text-lg font-semibold text-black mb-2">Objective: Enlarge office to meet AFH building code minimum size requirements</p>
+                <p className="text-base text-gray-800">Current office size is insufficient for AFH operations. Must be enlarged by reducing adjacent Laundry room size.</p>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="border-l-4 border-blue-500 pl-4">
+                  <h5 className="text-xl font-bold mb-2 text-black">Day-by-Day Activities:</h5>
+                  <div className="space-y-3">
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 1-2: Measurement & Planning</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Measure current office dimensions (length x width = current sq ft)</li>
+                        <li>Measure current laundry room dimensions</li>
+                        <li>Calculate required minimum office size per AFH code (verify with building department)</li>
+                        <li>Determine how much space to take from laundry (typically 2-4 feet of width)</li>
+                        <li>Mark new wall location on floor with chalk line</li>
+                        <li>Verify no electrical, plumbing, or HVAC conflicts with new wall location</li>
+                        <li>Document all measurements with photos</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 3-4: Demolition</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Turn off electrical circuits serving laundry room area</li>
+                        <li>Remove existing wall between office and laundry (if partial wall exists)</li>
+                        <li>Remove drywall from laundry room side (where new wall will be)</li>
+                        <li>Remove any baseboards, trim, or molding in affected area</li>
+                        <li>Dispose of demolition materials properly</li>
+                        <li>Clean work area thoroughly</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 5-7: New Wall Framing</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Install new 2x4 studs at 16-inch on-center spacing</li>
+                        <li>Install top plate and bottom plate</li>
+                        <li>Verify wall is plumb and square</li>
+                        <li>Install blocking for electrical outlets (if needed in new wall)</li>
+                        <li>Install blocking for door frame (if door needed between office and laundry)</li>
+                        <li>Verify new office dimensions meet minimum code requirements</li>
+                        <li>Have contractor verify framing meets code before proceeding</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 8-10: Electrical & HVAC</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Reroute any electrical wires affected by new wall</li>
+                        <li>Install new electrical outlets in enlarged office (if needed)</li>
+                        <li>Verify HVAC vents are properly positioned for new office size</li>
+                        <li>Adjust HVAC dampers if needed for proper air flow</li>
+                        <li>Electrical inspection (rough-in) if required by permit</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 11-13: Drywall & Finishing</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Install drywall on both sides of new wall</li>
+                        <li>Apply joint compound and tape seams</li>
+                        <li>Sand smooth after each coat (typically 3 coats)</li>
+                        <li>Prime and paint new wall to match existing</li>
+                        <li>Install baseboards and trim</li>
+                        <li>Verify finished office meets minimum size requirements</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-yellow-50 p-4 rounded-lg border-2 border-yellow-400">
+                  <h6 className="font-bold text-lg text-black mb-2">Key Requirements:</h6>
+                  <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                    <li>Office must meet AFH minimum size (verify exact requirement with City of Centralia Building Department)</li>
+                    <li>Laundry room must still meet minimum size after reduction (verify with building department)</li>
+                    <li>All work must comply with building codes</li>
+                    <li>Permit may be required - check with building department before starting</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 2: Laundry Reduction */}
+            <div className="bg-white rounded-lg p-6 border-2 border-blue-400 shadow-lg">
+              <h4 className="text-2xl font-bold mb-4 text-black">Step 2: Laundry Room Reduction</h4>
+              <div className="bg-blue-50 p-4 rounded-lg mb-4">
+                <p className="text-lg font-semibold text-black mb-2">Objective: Reduce laundry room size to accommodate office enlargement while maintaining minimum code requirements</p>
+                <p className="text-base text-gray-800">Laundry room will be reduced by 2-4 feet in width to allow office enlargement. Must verify minimum size requirements are still met.</p>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="border-l-4 border-blue-500 pl-4">
+                  <h5 className="text-xl font-bold mb-2 text-black">Day-by-Day Activities:</h5>
+                  <div className="space-y-3">
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 1-2: Verification & Planning</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Verify minimum laundry room size per AFH code (check with building department)</li>
+                        <li>Calculate new laundry room dimensions after reduction</li>
+                        <li>Ensure new dimensions still meet minimum requirements</li>
+                        <li>Plan relocation of any appliances or fixtures if needed</li>
+                        <li>Check if washer/dryer hookups need to be moved</li>
+                        <li>Verify door swing clearance after reduction</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 3-5: Appliance & Fixture Relocation (if needed)</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Disconnect washer and dryer (turn off water and gas/electric)</li>
+                        <li>Move appliances to temporary location if needed</li>
+                        <li>Relocate plumbing hookups if necessary (hire licensed plumber)</li>
+                        <li>Relocate electrical outlets if needed (hire licensed electrician)</li>
+                        <li>Verify all connections are code-compliant</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 6-8: Wall Construction</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>New wall construction (same process as office enlargement, opposite side)</li>
+                        <li>Install framing, drywall, and finishing</li>
+                        <li>Verify door clearance and swing (if door to garage exists)</li>
+                        <li>Ensure adequate space for washer/dryer operation</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 9-10: Final Verification</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Measure final laundry room dimensions</li>
+                        <li>Verify minimum code requirements are met</li>
+                        <li>Test washer/dryer operation</li>
+                        <li>Verify adequate clearance for appliance doors</li>
+                        <li>Document final dimensions for permit records</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 3: Primary Bath Reduction & CG Room Creation */}
+            <div className="bg-white rounded-lg p-6 border-2 border-blue-400 shadow-lg">
+              <h4 className="text-2xl font-bold mb-4 text-black">Step 3: Primary Bath Reduction & CG Room Creation</h4>
+              <div className="bg-blue-50 p-4 rounded-lg mb-4">
+                <p className="text-lg font-semibold text-black mb-2">Objective: Reduce primary bathroom size to create space for new Caregiver Room (CG Room)</p>
+                <p className="text-base text-gray-800">Primary bathroom will be reduced, and new CG room will be created in the space previously occupied by part of the primary bath.</p>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="border-l-4 border-blue-500 pl-4">
+                  <h5 className="text-xl font-bold mb-2 text-black">Day-by-Day Activities:</h5>
+                  <div className="space-y-3">
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 1-3: Planning & Measurement</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Measure current primary bathroom dimensions</li>
+                        <li>Determine minimum bathroom size per code (verify with building department)</li>
+                        <li>Calculate space needed for CG room (minimum size per AFH code)</li>
+                        <li>Plan new bathroom layout (ensure all fixtures fit in reduced space)</li>
+                        <li>Plan CG room layout (bed, storage, window for egress)</li>
+                        <li>Check for plumbing, electrical, and HVAC conflicts</li>
+                        <li>Mark new wall locations on floor</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 4-6: Demolition</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Turn off water supply to primary bathroom</li>
+                        <li>Turn off electrical circuits serving bathroom</li>
+                        <li>Remove fixtures that will be relocated (if any)</li>
+                        <li>Remove drywall from area where new wall will be built</li>
+                        <li>Remove flooring in area to become CG room</li>
+                        <li>Dispose of materials properly</li>
+                        <li>Clean work area</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 7-10: New Wall Framing</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Frame new wall separating reduced bathroom from CG room</li>
+                        <li>Install 2x4 studs at 16-inch on-center</li>
+                        <li>Install top plate and bottom plate</li>
+                        <li>Verify wall is plumb and square</li>
+                        <li>Install door frame for CG room entrance (if door needed)</li>
+                        <li>Install blocking for electrical outlets in both rooms</li>
+                        <li>Verify new bathroom still meets minimum code size</li>
+                        <li>Verify CG room meets minimum code size</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 11-15: Plumbing & Electrical</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Relocate plumbing fixtures if needed (hire licensed plumber)</li>
+                        <li>Ensure reduced bathroom has all required fixtures (toilet, sink, shower/tub)</li>
+                        <li>Install electrical outlets in CG room (minimum 2 outlets per code)</li>
+                        <li>Install lighting in CG room (meet minimum 20 foot-candles)</li>
+                        <li>Verify window in CG room meets egress requirements (if window exists or needs to be added)</li>
+                        <li>Electrical rough-in inspection (if required)</li>
+                        <li>Plumbing rough-in inspection (if required)</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 16-20: Drywall & Finishing</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Install drywall on new wall (both sides)</li>
+                        <li>Apply joint compound and tape</li>
+                        <li>Sand smooth (3 coats typical)</li>
+                        <li>Prime and paint both rooms</li>
+                        <li>Install baseboards and trim</li>
+                        <li>Install door to CG room (if applicable)</li>
+                        <li>Install door hardware</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 21-23: CG Room Finishing</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Install flooring in CG room (non-slip, easy to clean)</li>
+                        <li>Install closet or storage area</li>
+                        <li>Install lighting fixtures</li>
+                        <li>Verify all code requirements met (size, egress, lighting, outlets)</li>
+                        <li>Final inspection of CG room</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 4: Dining to Private Room Conversion */}
+            <div className="bg-white rounded-lg p-6 border-2 border-blue-400 shadow-lg">
+              <h4 className="text-2xl font-bold mb-4 text-black">Step 4: Dining Room to Private Resident Room Conversion</h4>
+              <div className="bg-blue-50 p-4 rounded-lg mb-4">
+                <p className="text-lg font-semibold text-black mb-2">Objective: Convert dining room to a private single resident room (80 sq ft minimum)</p>
+                <p className="text-base text-gray-800">Dining room will be converted to a private resident room meeting all AFH requirements including 80 sq ft minimum, egress window, handrails, and emergency call system.</p>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="border-l-4 border-blue-500 pl-4">
+                  <h5 className="text-xl font-bold mb-2 text-black">Day-by-Day Activities:</h5>
+                  <div className="space-y-3">
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 1-2: Assessment & Planning</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Measure dining room dimensions (verify 80 sq ft minimum)</li>
+                        <li>Verify window meets egress requirements (minimum 5.7 sq ft opening, 20-inch minimum width/height)</li>
+                        <li>Plan room layout (bed location, furniture placement, accessibility)</li>
+                        <li>Check door width (must be 32-inch minimum clear opening)</li>
+                        <li>Plan handrail locations (34-38 inch height along walls)</li>
+                        <li>Plan emergency call system button location (accessible from bed)</li>
+                        <li>Verify electrical outlets meet code (accessible height)</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 3-4: Demolition & Preparation</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Remove dining room furniture and fixtures</li>
+                        <li>Remove any built-in dining features (if any)</li>
+                        <li>Remove baseboards and trim</li>
+                        <li>Prepare walls for handrail installation (locate studs)</li>
+                        <li>Clean room thoroughly</li>
+                        <li>Verify floor is level and suitable for resident room</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 5-7: Handrail Installation</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Mark handrail locations (34-38 inch height from floor)</li>
+                        <li>Locate studs for proper anchoring</li>
+                        <li>Install handrails along walls (especially near bed area)</li>
+                        <li>Verify handrails are properly anchored (test for stability)</li>
+                        <li>Install end caps on handrails</li>
+                        <li>Verify smooth surface (no sharp edges)</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 8-9: Emergency Call System</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Install emergency call system button (accessible from bed)</li>
+                        <li>Connect to central monitoring system</li>
+                        <li>Test call system functionality</li>
+                        <li>Verify button is within reach from bed (both sides if double bed)</li>
+                        <li>Install at proper height (accessible without reaching)</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 10-12: Lighting & Electrical</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Verify lighting meets minimum 20 foot-candles throughout room</li>
+                        <li>Install task lighting near bed area (if needed)</li>
+                        <li>Verify all electrical outlets are accessible</li>
+                        <li>Install additional outlets if needed (minimum per code)</li>
+                        <li>Verify heating/cooling controls are accessible</li>
+                        <li>Test all electrical systems</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 13-15: Door & Window Verification</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Verify door width is 32-inch minimum clear opening</li>
+                        <li>Replace door if needed (lever handle, proper swing)</li>
+                        <li>Verify window meets egress requirements</li>
+                        <li>Replace or modify window if needed</li>
+                        <li>Test window operation (must open easily)</li>
+                        <li>Verify window opening is minimum 5.7 sq ft</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 16-18: Flooring & Finishing</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Install appropriate flooring (non-slip, easy to clean, healthcare-grade)</li>
+                        <li>Verify smooth transitions (no tripping hazards)</li>
+                        <li>Install baseboards</li>
+                        <li>Paint walls (if needed)</li>
+                        <li>Install closet or storage (accessible height)</li>
+                        <li>Final room inspection</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 5: Primary Bedroom Reduction & Corridor Creation */}
+            <div className="bg-white rounded-lg p-6 border-2 border-blue-400 shadow-lg">
+              <h4 className="text-2xl font-bold mb-4 text-black">Step 5: Primary Bedroom Reduction & Corridor Creation</h4>
+              <div className="bg-blue-50 p-4 rounded-lg mb-4">
+                <p className="text-lg font-semibold text-black mb-2">Objective: Reduce primary bedroom size to create corridor for access to CG room and primary bedroom</p>
+                <p className="text-base text-gray-800">Primary bedroom will be reduced, and a new corridor will be created to provide access to both the CG room and the primary bedroom. This ensures proper circulation and accessibility.</p>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="border-l-4 border-blue-500 pl-4">
+                  <h5 className="text-xl font-bold mb-2 text-black">Day-by-Day Activities:</h5>
+                  <div className="space-y-3">
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 1-3: Planning & Measurement</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Measure current primary bedroom dimensions</li>
+                        <li>Calculate minimum primary bedroom size per code (verify with building department)</li>
+                        <li>Plan corridor width (minimum 36 inches per code, recommend 42-48 inches)</li>
+                        <li>Plan corridor route (from entry to CG room and primary bedroom)</li>
+                        <li>Verify corridor provides access to both rooms</li>
+                        <li>Check for structural conflicts (load-bearing walls, etc.)</li>
+                        <li>Mark new wall locations for corridor</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 4-6: Demolition</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Remove furniture from primary bedroom</li>
+                        <li>Remove drywall from area where new corridor walls will be</li>
+                        <li>Remove baseboards and trim in affected areas</li>
+                        <li>Dispose of materials properly</li>
+                        <li>Clean work area</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 7-10: Corridor Wall Framing</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Frame new walls to create corridor</li>
+                        <li>Install 2x4 studs at 16-inch on-center</li>
+                        <li>Verify corridor width is minimum 36 inches (recommend 42-48 inches)</li>
+                        <li>Install door frames for CG room and primary bedroom entrances</li>
+                        <li>Verify door swings don't obstruct corridor</li>
+                        <li>Install blocking for handrails (if needed in corridor)</li>
+                        <li>Verify reduced primary bedroom still meets minimum code size</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 11-13: Electrical & Lighting</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Install lighting in corridor (minimum 20 foot-candles)</li>
+                        <li>Install light switches at both ends of corridor (3-way switch)</li>
+                        <li>Install handrails in corridor if required (34-38 inch height)</li>
+                        <li>Verify electrical outlets in reduced primary bedroom</li>
+                        <li>Test all electrical systems</li>
+                        <li>Electrical inspection if required</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 14-16: Doors & Access</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Install doors to CG room and primary bedroom (32-inch minimum clear opening)</li>
+                        <li>Install lever handles (ADA-compliant)</li>
+                        <li>Verify door swings don't obstruct corridor</li>
+                        <li>Test door operation</li>
+                        <li>Verify adequate clearance for wheelchair (60-inch turning radius in rooms)</li>
+                        <li>Install door stops and closers if needed</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded border">
+                      <div className="font-bold text-lg text-blue-700 mb-2">Day 17-20: Drywall & Finishing</div>
+                      <ul className="list-disc list-inside space-y-1 text-base text-black font-semibold">
+                        <li>Install drywall on corridor walls</li>
+                        <li>Apply joint compound and tape</li>
+                        <li>Sand smooth (3 coats)</li>
+                        <li>Prime and paint corridor</li>
+                        <li>Install baseboards and trim</li>
+                        <li>Install flooring in corridor (non-slip, matches adjacent areas)</li>
+                        <li>Final inspection of corridor and reduced primary bedroom</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Summary & Verification */}
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6 border-4 border-green-400 shadow-xl">
+              <h4 className="text-2xl font-bold mb-4 text-black">Final Verification & Completion Checklist</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-white p-4 rounded-lg border-2 border-gray-300">
+                  <h5 className="text-xl font-bold mb-3 text-black">Room Size Verification</h5>
+                  <ul className="space-y-2 text-base text-black font-semibold">
+                    <li>□ Office: Meets minimum AFH code size</li>
+                    <li>□ Laundry: Meets minimum AFH code size</li>
+                    <li>□ Primary Bath: Meets minimum code size</li>
+                    <li>□ CG Room: Meets minimum AFH code size (80 sq ft minimum if resident room, or minimum for staff room)</li>
+                    <li>□ Dining (converted): Meets 80 sq ft minimum for private single room</li>
+                    <li>□ Primary Bedroom: Meets minimum code size</li>
+                  </ul>
+                </div>
+                <div className="bg-white p-4 rounded-lg border-2 border-gray-300">
+                  <h5 className="text-xl font-bold mb-3 text-black">Code Compliance Verification</h5>
+                  <ul className="space-y-2 text-base text-black font-semibold">
+                    <li>□ All doors: 32-inch minimum clear opening</li>
+                    <li>□ All windows: Meet egress requirements</li>
+                    <li>□ Handrails: 34-38 inch height, properly anchored</li>
+                    <li>□ Emergency call systems: Installed and functional</li>
+                    <li>□ Lighting: 20 foot-candles minimum throughout</li>
+                    <li>□ Corridor: 36-inch minimum width</li>
+                    <li>□ All permits obtained and inspections passed</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Contacts */}
         <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
           <h2 className="text-2xl font-bold mb-4">Key Contacts (주요 연락처)</h2>

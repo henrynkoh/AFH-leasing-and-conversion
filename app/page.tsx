@@ -15,7 +15,7 @@ export default function Home() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveFeature((prev) => (prev + 1) % 7);
+      setActiveFeature((prev) => (prev + 1) % 8);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -62,6 +62,13 @@ export default function Home() {
       description: 'Detailed step-by-step execution plan with daily tasks',
       color: 'from-orange-500 to-red-500',
       link: '/execution-plan'
+    },
+    {
+      icon: '🏗️',
+      title: '1단계 추진안',
+      description: 'Phase 1 Implementation Plan - Detailed floor plan modifications',
+      color: 'from-purple-500 to-blue-500',
+      link: '/execution-plan#phase1-implementation'
     },
     {
       icon: '📊',
@@ -270,7 +277,7 @@ export default function Home() {
             <p className="text-xl text-blue-200">Navigate to any section to begin</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-4 max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-4 max-w-8xl mx-auto">
             <Link href="/scenarios" className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transform hover:scale-105 transition-all">
               <div className="text-3xl mb-2">🎯</div>
               <div className="text-white font-semibold text-sm">Scenarios</div>
@@ -295,6 +302,11 @@ export default function Home() {
               <div className="text-3xl mb-2">📋</div>
               <div className="text-white font-semibold text-sm">실행방안</div>
               <div className="text-white/80 text-xs mt-1">Execution Plan</div>
+            </Link>
+            <Link href="/execution-plan#phase1-implementation" className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-lg rounded-xl p-6 text-center border-2 border-purple-400/30 hover:bg-purple-500/30 transform hover:scale-105 transition-all">
+              <div className="text-3xl mb-2">🏗️</div>
+              <div className="text-white font-semibold text-sm">1단계 추진안</div>
+              <div className="text-white/80 text-xs mt-1">Phase 1 Plan</div>
             </Link>
             <Link href="/" className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transform hover:scale-105 transition-all">
               <div className="text-3xl mb-2">📊</div>
