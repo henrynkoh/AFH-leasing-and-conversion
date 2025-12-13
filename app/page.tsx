@@ -66,10 +66,10 @@ export default function Home() {
   ];
 
   const stats = [
-    { number: '3-4', label: 'Bed Capacity' },
+    { number: '3-8', label: 'Bed Capacity' },
     { number: '2,100', label: 'Square Feet' },
-    { number: '$25K-$75K', label: 'Conversion Range' },
-    { number: '90-180', label: 'Days Timeline' }
+    { number: '$35K-$100K+', label: 'Conversion Range' },
+    { number: '90-210', label: 'Days Timeline' }
   ];
 
   return (
@@ -198,8 +198,8 @@ export default function Home() {
                   <div className="flex items-start gap-4">
                     <div className="text-3xl">✅</div>
                     <div>
-                      <h4 className="text-white font-semibold text-lg mb-1">3-4 Bed Capacity</h4>
-                      <p className="text-blue-200">3 bedrooms on main level, verified through floor plan analysis</p>
+                      <h4 className="text-white font-semibold text-lg mb-1">3-8 Bed Capacity Options</h4>
+                      <p className="text-blue-200">Current: 3 beds. Conversion options: 5, 6, or 8 beds with garage conversion</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">

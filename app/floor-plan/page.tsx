@@ -189,15 +189,55 @@ export default function FloorPlanPage() {
   };
 
   const afhAnalysis = {
-    totalBeds: '3-4 beds possible',
-    residentRooms: ['Primary Bedroom (with walk-in closet, bath off primary)', 'Bedroom 1', 'Bedroom 2', 'Den/Office (if converted to resident room)'],
+    currentStatus: {
+      beds: '3 beds',
+      baths: '2 baths',
+      bonusRoom: '1 bonus room',
+      garage: '3-car garage',
+      description: 'Current property status - ready for lease as-is or conversion'
+    },
+    conversionOptions: [
+      {
+        option: 'Option 1: 5 Beds',
+        beds: '5 beds',
+        baths: '2 baths',
+        caregiverRoom: '1 caregiver room',
+        garage: '3-car garage',
+        description: 'Convert bonus room to 2 resident rooms, create caregiver room',
+        cost: '$35,000 - $50,000',
+        timeline: '90-120 days'
+      },
+      {
+        option: 'Option 2: 6 Beds',
+        beds: '6 beds',
+        baths: '2 baths',
+        caregiverRoom: '1 caregiver room',
+        garage: '3-car garage',
+        description: 'Convert bonus room to 3 resident rooms, optimize all space',
+        cost: '$50,000 - $70,000',
+        timeline: '120-150 days'
+      },
+      {
+        option: 'Option 3: 8 Beds',
+        beds: '8 beds',
+        baths: '2 baths',
+        caregiverRoom: '1 caregiver room',
+        garage: 'Garage conversion (3-car garage converted)',
+        description: 'Convert garage to 2 resident rooms, bonus room to 3 rooms, maximum capacity',
+        cost: '$75,000 - $100,000+',
+        timeline: '150-210 days'
+      }
+    ],
+    totalBeds: '3 beds (current) / 5-8 beds (conversion options)',
+    residentRooms: ['Primary Bedroom (with walk-in closet, bath off primary)', 'Bedroom 1', 'Bedroom 2', 'Bonus Room (convertible to 2-3 resident rooms)', 'Garage (Option 3: convertible to 2 resident rooms)'],
     commonAreas: ['Great Room (primary)', 'Living Room (secondary)', 'Dining Room', 'Kitchen with Eating Space', 'Patio'],
     bathrooms: 2,
     complianceScore: '75% - Good foundation, needs modifications',
-    estimatedConversionCost: '$25,000 - $40,000 (minimal)',
-    estimatedConversionCostFull: '$50,000 - $75,000 (full)',
-    totalSquareFootage: '2,100 sq ft (single level)',
-    residentRoomTotal: 'Approximately 450-600 sq ft (3 bedrooms, potentially 4 if den converted)',
+    estimatedConversionCost: '$35,000 - $50,000 (Option 1: 5 beds)',
+    estimatedConversionCostFull: '$50,000 - $70,000 (Option 2: 6 beds)',
+    estimatedConversionCostMaximum: '$75,000 - $100,000+ (Option 3: 8 beds with garage conversion)',
+    totalSquareFootage: '2,100 sq ft (single level) + garage space (Option 3)',
+    residentRoomTotal: 'Approximately 450-600 sq ft (3 bedrooms current, +200-400 sq ft with conversions)',
     commonAreaTotal: 'Approximately 700-900 sq ft (great room, living, dining, kitchen eating space)',
     bathroomTotal: 'Approximately 100-160 sq ft (2 full bathrooms)',
     supportSpaceTotal: 'Approximately 740+ sq ft (kitchen, den/office, utility room, entry hall, 3-car garage)',
@@ -245,7 +285,69 @@ export default function FloorPlanPage() {
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-2">Floor Plan Analysis</h1>
-        <p className="text-gray-600 mb-8">Interactive analysis of property for AFH operation</p>
+        <p className="text-gray-600 mb-8">Interactive analysis of property for AFH operation - Current status and conversion options</p>
+
+        {/* Current Status and Conversion Options */}
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+          <h2 className="text-2xl font-bold mb-4">Current Status & Conversion Options</h2>
+          
+          <div className="mb-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+            <h3 className="text-xl font-semibold mb-3">Current Property Status</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div>
+                <div className="text-sm text-gray-600">Beds</div>
+                <div className="font-bold text-lg">{afhAnalysis.currentStatus.beds}</div>
+              </div>
+              <div>
+                <div className="text-sm text-gray-600">Baths</div>
+                <div className="font-bold text-lg">{afhAnalysis.currentStatus.baths}</div>
+              </div>
+              <div>
+                <div className="text-sm text-gray-600">Bonus Room</div>
+                <div className="font-bold text-lg">{afhAnalysis.currentStatus.bonusRoom}</div>
+              </div>
+              <div>
+                <div className="text-sm text-gray-600">Garage</div>
+                <div className="font-bold text-lg">{afhAnalysis.currentStatus.garage}</div>
+              </div>
+            </div>
+            <p className="text-gray-700 mt-3">{afhAnalysis.currentStatus.description}</p>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold mb-3">Future Conversion Options</h3>
+            {afhAnalysis.conversionOptions.map((option, index) => (
+              <div key={index} className="p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
+                <div className="flex justify-between items-start mb-2">
+                  <h4 className="text-lg font-bold text-green-800">{option.option}</h4>
+                  <span className="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+                    {option.cost}
+                  </span>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-2">
+                  <div>
+                    <div className="text-sm text-gray-600">Beds</div>
+                    <div className="font-semibold">{option.beds}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Baths</div>
+                    <div className="font-semibold">{option.baths}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Caregiver Room</div>
+                    <div className="font-semibold">{option.caregiverRoom}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Garage</div>
+                    <div className="font-semibold">{option.garage}</div>
+                  </div>
+                </div>
+                <p className="text-gray-700 text-sm mb-2">{option.description}</p>
+                <div className="text-sm text-gray-600">Timeline: <span className="font-semibold">{option.timeline}</span></div>
+              </div>
+            ))}
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
