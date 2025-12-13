@@ -497,12 +497,12 @@ export default function FloorPlanPage() {
                 <h3 className="text-xl font-bold mb-4">{rooms[selectedRoom as keyof typeof rooms].name}</h3>
                 <div className="space-y-4">
                   <div>
-                    <div className="text-sm text-gray-600 font-semibold mb-1">AFH Use</div>
-                    <div className="font-semibold text-gray-900">{rooms[selectedRoom as keyof typeof rooms].afhUse}</div>
+                    <div className="text-base font-bold text-black mb-2">AFH Use</div>
+                    <div className="font-bold text-lg text-black">{rooms[selectedRoom as keyof typeof rooms].afhUse}</div>
                   </div>
                   <div>
-                    <div className="text-sm text-gray-600 font-semibold mb-1">Compliance Status</div>
-                    <div className="font-semibold text-gray-900">{rooms[selectedRoom as keyof typeof rooms].compliance}</div>
+                    <div className="text-base font-bold text-black mb-2">Compliance Status</div>
+                    <div className="font-bold text-lg text-black">{rooms[selectedRoom as keyof typeof rooms].compliance}</div>
                   </div>
                   <div>
                     <div className="text-base font-bold text-black mb-2">Dimensions</div>
