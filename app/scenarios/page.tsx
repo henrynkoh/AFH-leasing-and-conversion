@@ -240,49 +240,49 @@ export default function ScenariosPage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6 bg-gray-50 p-4 rounded-lg">
-                <div>
-                  <div className="text-sm text-gray-600">Timeline</div>
-                  <div className="font-semibold text-lg">{scenario.timeline}</div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6 bg-gray-100 p-5 rounded-lg border-2 border-gray-300 shadow-md">
+                <div className="bg-white p-4 rounded-lg border-2 border-blue-300">
+                  <div className="text-base font-bold text-black mb-2">Timeline</div>
+                  <div className="font-bold text-xl text-blue-700 leading-relaxed">{scenario.timeline}</div>
                 </div>
-                <div>
-                  <div className="text-sm text-gray-600">Total Budget</div>
-                  <div className="font-semibold text-lg">{scenario.budget}</div>
+                <div className="bg-white p-4 rounded-lg border-2 border-green-300">
+                  <div className="text-base font-bold text-black mb-2">Total Budget</div>
+                  <div className="font-bold text-xl text-green-700 leading-relaxed">{scenario.budget}</div>
                 </div>
-                <div>
-                  <div className="text-sm text-gray-600">Landlord Share</div>
-                  <div className="font-semibold text-lg">{scenario.landlordShare}</div>
+                <div className="bg-white p-4 rounded-lg border-2 border-purple-300">
+                  <div className="text-base font-bold text-black mb-2">Landlord Share</div>
+                  <div className="font-bold text-xl text-purple-700 leading-relaxed">{scenario.landlordShare}</div>
                 </div>
-                <div>
-                  <div className="text-sm text-gray-600">Tenant Share</div>
-                  <div className="font-semibold text-lg">{scenario.tenantShare}</div>
+                <div className="bg-white p-4 rounded-lg border-2 border-orange-300">
+                  <div className="text-base font-bold text-black mb-2">Tenant Share</div>
+                  <div className="font-bold text-xl text-orange-700 leading-relaxed">{scenario.tenantShare}</div>
                 </div>
               </div>
 
               {(scenario.currentCapacity || scenario.conversionDetails || scenario.rentRange || scenario.targetProviders) && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 bg-blue-50 p-4 rounded-lg">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 bg-blue-100 p-5 rounded-lg border-2 border-blue-400 shadow-md">
                   {scenario.currentCapacity && (
-                    <div>
-                      <div className="text-sm text-gray-600">Current Capacity</div>
-                      <div className="font-semibold text-lg text-blue-700">{scenario.currentCapacity}</div>
+                    <div className="bg-white p-4 rounded-lg border-2 border-blue-300">
+                      <div className="text-base font-bold text-black mb-2">Current Capacity</div>
+                      <div className="font-bold text-xl text-blue-700 leading-relaxed">{scenario.currentCapacity}</div>
                     </div>
                   )}
                   {scenario.rentRange && (
-                    <div>
-                      <div className="text-sm text-gray-600">Expected Rent Range</div>
-                      <div className="font-semibold text-lg text-green-700">{scenario.rentRange}</div>
+                    <div className="bg-white p-4 rounded-lg border-2 border-green-300">
+                      <div className="text-base font-bold text-black mb-2">Expected Rent Range</div>
+                      <div className="font-bold text-xl text-green-700 leading-relaxed">{scenario.rentRange}</div>
                     </div>
                   )}
                   {scenario.conversionDetails && (
-                    <div className="md:col-span-2">
-                      <div className="text-sm text-gray-600 mb-1">Conversion Details</div>
-                      <div className="text-gray-700">{scenario.conversionDetails}</div>
+                    <div className="md:col-span-2 bg-white p-4 rounded-lg border-2 border-gray-300">
+                      <div className="text-base font-bold text-black mb-2">Conversion Details</div>
+                      <div className="text-lg text-black font-semibold leading-relaxed">{scenario.conversionDetails}</div>
                     </div>
                   )}
                   {scenario.targetProviders && (
-                    <div className="md:col-span-2">
-                      <div className="text-sm text-gray-600 mb-1">Target Providers</div>
-                      <div className="text-gray-700">{scenario.targetProviders}</div>
+                    <div className="md:col-span-2 bg-white p-4 rounded-lg border-2 border-gray-300">
+                      <div className="text-base font-bold text-black mb-2">Target Providers</div>
+                      <div className="text-lg text-black font-semibold leading-relaxed">{scenario.targetProviders}</div>
                     </div>
                   )}
                 </div>

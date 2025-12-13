@@ -354,7 +354,7 @@ export default function FloorPlanPage() {
                   </div>
                 </div>
                 <p className="text-gray-700 text-sm mb-2">{option.description}</p>
-                <div className="text-sm text-gray-600">Timeline: <span className="font-semibold">{option.timeline}</span></div>
+                <div className="text-base font-bold text-black">Timeline: <span className="font-bold text-lg text-blue-700">{option.timeline}</span></div>
               </div>
             ))}
           </div>
@@ -505,32 +505,32 @@ export default function FloorPlanPage() {
                     <div className="font-semibold text-gray-900">{rooms[selectedRoom as keyof typeof rooms].compliance}</div>
                   </div>
                   <div>
-                    <div className="text-sm text-gray-600 font-semibold mb-1">Dimensions</div>
-                    <div className="text-sm text-gray-700">{rooms[selectedRoom as keyof typeof rooms].dimensions}</div>
+                    <div className="text-base font-bold text-black mb-2">Dimensions</div>
+                    <div className="text-base text-black font-semibold">{rooms[selectedRoom as keyof typeof rooms].dimensions}</div>
                   </div>
                   <div>
-                    <div className="text-sm text-gray-600 font-semibold mb-1">Required Modifications</div>
-                    <div className="text-sm text-gray-700 leading-relaxed">{rooms[selectedRoom as keyof typeof rooms].modifications}</div>
+                    <div className="text-base font-bold text-black mb-2">Required Modifications</div>
+                    <div className="text-base text-black font-semibold leading-relaxed">{rooms[selectedRoom as keyof typeof rooms].modifications}</div>
                   </div>
                   <div>
-                    <div className="text-sm text-gray-600 font-semibold mb-1">Estimated Cost</div>
-                    <div className="font-semibold text-blue-600 text-lg">{rooms[selectedRoom as keyof typeof rooms].cost}</div>
+                    <div className="text-base font-bold text-black mb-2">Estimated Cost</div>
+                    <div className="font-bold text-blue-600 text-xl">{rooms[selectedRoom as keyof typeof rooms].cost}</div>
                   </div>
                   <div>
-                    <div className="text-sm text-gray-600 font-semibold mb-1">Modification Timeline</div>
-                    <div className="text-sm text-gray-700">{rooms[selectedRoom as keyof typeof rooms].timeline}</div>
+                    <div className="text-base font-bold text-black mb-2">Modification Timeline</div>
+                    <div className="text-base text-black font-bold">{rooms[selectedRoom as keyof typeof rooms].timeline}</div>
                   </div>
                   <div>
-                    <div className="text-sm text-gray-600 font-semibold mb-1">WABO Requirements</div>
-                    <div className="text-sm text-gray-700">{rooms[selectedRoom as keyof typeof rooms].waboRequirements}</div>
+                    <div className="text-base font-bold text-black mb-2">WABO Requirements</div>
+                    <div className="text-base text-black font-semibold leading-relaxed">{rooms[selectedRoom as keyof typeof rooms].waboRequirements}</div>
                   </div>
                   <div>
-                    <div className="text-sm text-gray-600 font-semibold mb-1">Accessibility Assessment</div>
-                    <div className="text-sm text-gray-700">{rooms[selectedRoom as keyof typeof rooms].accessibility}</div>
+                    <div className="text-base font-bold text-black mb-2">Accessibility Assessment</div>
+                    <div className="text-base text-black font-semibold leading-relaxed">{rooms[selectedRoom as keyof typeof rooms].accessibility}</div>
                   </div>
-                  <div className="bg-blue-50 p-3 rounded border-l-4 border-blue-500">
-                    <div className="text-sm text-gray-600 font-semibold mb-1">Additional Notes</div>
-                    <div className="text-sm text-gray-700">{rooms[selectedRoom as keyof typeof rooms].notes}</div>
+                  <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500 border-2">
+                    <div className="text-base font-bold text-black mb-2">Additional Notes</div>
+                    <div className="text-base text-black font-semibold leading-relaxed">{rooms[selectedRoom as keyof typeof rooms].notes}</div>
                   </div>
                 </div>
               </div>
@@ -622,12 +622,12 @@ export default function FloorPlanPage() {
                 <div>
                   <div className="font-semibold mb-1">Minimal WABO Compliance</div>
                   <div className="text-blue-700 font-semibold text-base">{afhAnalysis.estimatedConversionCost}</div>
-                  <div className="text-xs text-gray-600 mt-1">Timeline: {afhAnalysis.timelineEstimate.split(',')[0]}</div>
+                  <div className="text-base font-bold text-black mt-2">Timeline: <span className="text-blue-700">{afhAnalysis.timelineEstimate.split(',')[0]}</span></div>
                 </div>
                 <div>
                   <div className="font-semibold mb-1">Full AFH Conversion</div>
                   <div className="text-blue-700 font-semibold text-base">{afhAnalysis.estimatedConversionCostFull}</div>
-                  <div className="text-xs text-gray-600 mt-1">Timeline: {afhAnalysis.timelineEstimate.split(',')[1]}</div>
+                  <div className="text-base font-bold text-black mt-2">Timeline: <span className="text-blue-700">{afhAnalysis.timelineEstimate.split(',')[1]}</span></div>
                 </div>
                 <div className="border-t pt-3 mt-3">
                   <div className="font-semibold mb-2">Compliance Priorities (by cost)</div>

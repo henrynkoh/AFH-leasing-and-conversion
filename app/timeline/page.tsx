@@ -311,26 +311,26 @@ export default function TimelinePage() {
           </div>
         </div>
 
-        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg mb-8">
+        <div className="bg-blue-100 border-l-4 border-blue-600 p-6 rounded-lg mb-8 border-2 border-blue-400 shadow-lg">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div>
-              <div className="text-sm text-gray-600">Total Timeline</div>
-              <div className="text-2xl font-bold">{totalDays} days</div>
-              <div className="text-sm text-gray-600">({Math.round(totalDays / 30)} months)</div>
+            <div className="bg-white p-5 rounded-lg border-2 border-blue-300 shadow-md">
+              <div className="text-base font-bold text-black mb-2">Total Timeline</div>
+              <div className="text-3xl font-bold text-blue-700 mb-1">{totalDays} days</div>
+              <div className="text-base font-semibold text-black">({Math.round(totalDays / 30)} months)</div>
             </div>
-            <div>
-              <div className="text-sm text-gray-600">Total Cost</div>
-              <div className="text-2xl font-bold">${totals.totalCost.toLocaleString()}</div>
+            <div className="bg-white p-5 rounded-lg border-2 border-green-300 shadow-md">
+              <div className="text-base font-bold text-black mb-2">Total Cost</div>
+              <div className="text-3xl font-bold text-green-700">${totals.totalCost.toLocaleString()}</div>
             </div>
-            <div>
-              <div className="text-sm text-gray-600">Landlord Share</div>
-              <div className="text-2xl font-bold text-blue-700">${Math.round(totals.landlordTotal).toLocaleString()}</div>
-              <div className="text-sm text-gray-600">({Math.round((totals.landlordTotal / totals.totalCost) * 100)}%)</div>
+            <div className="bg-white p-5 rounded-lg border-2 border-purple-300 shadow-md">
+              <div className="text-base font-bold text-black mb-2">Landlord Share</div>
+              <div className="text-3xl font-bold text-purple-700 mb-1">${Math.round(totals.landlordTotal).toLocaleString()}</div>
+              <div className="text-base font-semibold text-black">({Math.round((totals.landlordTotal / totals.totalCost) * 100)}%)</div>
             </div>
-            <div>
-              <div className="text-sm text-gray-600">Tenant Share</div>
-              <div className="text-2xl font-bold text-green-700">${Math.round(totals.tenantTotal).toLocaleString()}</div>
-              <div className="text-sm text-gray-600">({Math.round((totals.tenantTotal / totals.totalCost) * 100)}%)</div>
+            <div className="bg-white p-5 rounded-lg border-2 border-orange-300 shadow-md">
+              <div className="text-base font-bold text-black mb-2">Tenant Share</div>
+              <div className="text-3xl font-bold text-orange-700 mb-1">${Math.round(totals.tenantTotal).toLocaleString()}</div>
+              <div className="text-base font-semibold text-black">({Math.round((totals.tenantTotal / totals.totalCost) * 100)}%)</div>
             </div>
           </div>
         </div>

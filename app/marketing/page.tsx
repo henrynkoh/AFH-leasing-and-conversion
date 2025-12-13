@@ -338,8 +338,8 @@ FOLLOW-UP:
                       <div className="font-semibold">{scenario.message}</div>
                     </div>
                     <div>
-                      <div className="text-sm text-gray-600 mb-1">Timeline</div>
-                      <div className="font-semibold">{scenario.timeline}</div>
+                      <div className="text-base font-bold text-black mb-2">Timeline</div>
+                      <div className="font-bold text-lg text-blue-700">{scenario.timeline}</div>
                     </div>
                     <div>
                       <div className="text-sm text-gray-600 mb-1">Marketing Budget</div>
