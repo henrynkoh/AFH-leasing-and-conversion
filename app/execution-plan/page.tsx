@@ -871,29 +871,29 @@ export default function ExecutionPlanPage() {
         <div className="bg-white rounded-lg shadow-lg p-6 mb-8 border-2 border-red-300">
           <h2 className="text-2xl font-bold mb-4 text-red-700">Basic Plan (기본 계획)</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-              <div className="text-sm font-bold text-black mb-1">Project Name</div>
-              <div className="font-bold text-lg text-red-900">{basicPlan.projectName}</div>
+            <div className="bg-red-50 p-5 rounded-lg border-2 border-red-300 shadow-md">
+              <div className="text-base font-bold text-black mb-2">Project Name</div>
+              <div className="font-bold text-xl text-red-900 leading-relaxed">{basicPlan.projectName}</div>
             </div>
-            <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-              <div className="text-sm font-bold text-black mb-1">Target Capacity</div>
-              <div className="font-bold text-lg text-red-900">{basicPlan.targetCapacity}</div>
+            <div className="bg-red-50 p-5 rounded-lg border-2 border-red-300 shadow-md">
+              <div className="text-base font-bold text-black mb-2">Target Capacity</div>
+              <div className="font-bold text-xl text-red-900 leading-relaxed">{basicPlan.targetCapacity}</div>
             </div>
-            <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-              <div className="text-sm font-bold text-black mb-1">Total Timeline</div>
-              <div className="font-bold text-lg text-red-900">{basicPlan.totalTimeline}</div>
+            <div className="bg-red-50 p-5 rounded-lg border-2 border-red-300 shadow-md">
+              <div className="text-base font-bold text-black mb-2">Total Timeline</div>
+              <div className="font-bold text-xl text-red-900 leading-relaxed">{basicPlan.totalTimeline}</div>
             </div>
-            <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-              <div className="text-sm font-bold text-black mb-1">Total Budget</div>
-              <div className="font-bold text-lg text-red-900">{basicPlan.totalBudget}</div>
+            <div className="bg-red-50 p-5 rounded-lg border-2 border-red-300 shadow-md">
+              <div className="text-base font-bold text-black mb-2">Total Budget</div>
+              <div className="font-bold text-xl text-red-900 leading-relaxed">{basicPlan.totalBudget}</div>
             </div>
-            <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-              <div className="text-sm font-bold text-black mb-1">Location</div>
-              <div className="font-bold text-red-900">{basicPlan.location}</div>
+            <div className="bg-red-50 p-5 rounded-lg border-2 border-red-300 shadow-md">
+              <div className="text-base font-bold text-black mb-2">Location</div>
+              <div className="font-bold text-lg text-red-900 leading-relaxed">{basicPlan.location}</div>
             </div>
-            <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-              <div className="text-sm font-bold text-black mb-1">Jurisdiction</div>
-              <div className="font-bold text-red-900">{basicPlan.jurisdiction}</div>
+            <div className="bg-red-50 p-5 rounded-lg border-2 border-red-300 shadow-md">
+              <div className="text-base font-bold text-black mb-2">Jurisdiction</div>
+              <div className="font-bold text-lg text-red-900 leading-relaxed">{basicPlan.jurisdiction}</div>
             </div>
           </div>
         </div>
@@ -955,11 +955,11 @@ export default function ExecutionPlanPage() {
           <h2 className="text-2xl font-bold mb-4">시방서 (Specifications)</h2>
           <div className="space-y-6">
             {specifications.sections.map((section, index) => (
-              <div key={index} className="border-l-4 border-green-500 pl-4">
-                <h3 className="text-lg font-semibold mb-2">{section.section}</h3>
-                <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
+              <div key={index} className="border-l-4 border-green-500 pl-4 bg-green-50 p-4 rounded-r-lg mb-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{section.section}</h3>
+                <ul className="list-disc list-inside space-y-2 text-base text-gray-900">
                   {section.items.map((item, i) => (
-                    <li key={i}>{item}</li>
+                    <li key={i} className="leading-relaxed">{item}</li>
                   ))}
                 </ul>
               </div>
@@ -989,8 +989,8 @@ export default function ExecutionPlanPage() {
           </div>
           <div className="space-y-6">
             {dailyTasks[selectedPhase].days.map((day, dayIndex) => (
-              <div key={dayIndex} className="border rounded-lg p-4 bg-gray-50">
-                <h3 className="text-lg font-semibold mb-3 text-blue-700">{day.day}</h3>
+              <div key={dayIndex} className="border-2 border-gray-300 rounded-lg p-5 bg-gray-50 shadow-md mb-4">
+                <h3 className="text-xl font-bold mb-4 text-blue-700 bg-white px-4 py-2 rounded">{day.day}</h3>
                 <div className="space-y-4">
                   {day.tasks.map((task, taskIndex) => (
                     <div key={taskIndex} className="bg-white p-4 rounded border-l-4 border-blue-500">
