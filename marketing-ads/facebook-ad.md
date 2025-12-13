@@ -2,32 +2,38 @@
 
 ## Ad Version 1: Attention-Grabbing Headline
 
-**Headline:** 🏠 WABO-READY AFH PROPERTY - Centralia, WA - 5-6 Bed Capacity
+**Headline:** 🏠 WABO-READY AFH PROPERTY - Centralia, WA - 3-4 Bed Capacity
 
 **Ad Copy:**
 
 Looking to expand your Adult Family Home operations? This prime property in Centralia, WA is ready for your AFH business!
 
-📍 **1713 Winterwood Dr, Centralia, WA**
-📏 **5-6 Bed Capacity**
+📍 **1713 Winterwood Drive, Centralia, WA 98531**
+📏 **3-4 Bed Capacity**
 ✅ **WABO Permit-Ready or Fully Converted**
 
 **Why This Property?**
-• Spacious 3,000+ sq ft single-family home
-• Ideal layout for AFH operation with multiple resident rooms
-• Large common areas perfect for resident activities
-• Outdoor patio space for residents to enjoy
-• 3-car garage for storage and parking
+• 2,100 sq ft single-level home (built 2005) - excellent for accessibility
+• 3 bedrooms on main level (Primary bedroom with walk-in closet and bath off primary)
+• Great room with vaulted ceilings and skylights - excellent natural light
+• Multiple common areas (Great room, Living room, Dining room, Kitchen with eating space)
+• Den/Office space (can serve as 4th resident room or administrative space)
+• Patio with territorial view and hot tub/spa - highly valued by residents
+• 3-car attached garage with RV parking - excellent storage
+• Cul-de-sac location - quiet, safe environment
+• Partially fenced yard - added security
 • Prime Centralia location in growing AFH market
 
 **Property Features:**
-✓ 5-6 resident rooms available
-✓ Two full bathrooms (ADA-compliant ready)
-✓ Large living room and den for common activities
-✓ Dedicated dining area
-✓ Fully equipped kitchen
-✓ Office space for administrative use
-✓ Laundry facilities on-site
+✓ 3 bedrooms on main level (Primary bedroom with walk-in closet and bath off primary, plus 2 additional bedrooms)
+✓ Two full bathrooms on main level (both need ADA modifications)
+✓ Great room with vaulted ceilings and skylights (primary common area)
+✓ Living room (secondary common area)
+✓ Dedicated dining room
+✓ Kitchen with eating space (all appliances included: dishwasher, disposal, microwave, refrigerator, stove/range, washer, dryer)
+✓ Den/Office space (flexible use - resident room or administrative)
+✓ Utility room with laundry facilities
+✓ Entry hall
 
 **Lease Terms:**
 • Long-term lease preferred (5-10 years)

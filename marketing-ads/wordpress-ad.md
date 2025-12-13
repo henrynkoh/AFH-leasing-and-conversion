@@ -2,11 +2,11 @@
 
 ## WordPress Post: Complete Property Listing with SEO
 
-**Post Title:** WABO-Ready AFH Property for Lease in Centralia, WA - 5-6 Bed Capacity | Complete Analysis Included
+**Post Title:** WABO-Ready AFH Property for Lease in Centralia, WA - 3-4 Bed Capacity | Complete Analysis Included
 
 **Slug:** wabo-ready-afh-property-lease-centralia-wa
 
-**Meta Description:** Prime Adult Family Home property available for lease in Centralia, Washington. Complete AFH analysis included. 5-6 bed capacity, flexible lease terms, cost-sharing options. Perfect for AFH providers.
+**Meta Description:** Prime Adult Family Home property available for lease in Centralia, Washington. Complete AFH analysis included. 3-4 bed capacity (2,100 sq ft single-level), flexible lease terms, cost-sharing options. Perfect for AFH providers.
 
 **Featured Image:** Property exterior photo
 
@@ -30,12 +30,14 @@ Unlike other properties where you have to guess about AFH suitability, this prop
 
 ## Property Overview
 
-**Address:** 1713 Winterwood Dr, Centralia, WA  
+**Address:** 1713 Winterwood Drive, Centralia, WA 98531  
 **Property Type:** Single-family home, ideal for AFH conversion  
-**Square Footage:** Approximately 3,000+ sq ft  
-**AFH Capacity:** 5-6 beds (verified through detailed analysis)  
+**Square Footage:** 2,100 sq ft (single level, all on main floor)  
+**Year Built:** 2005  
+**AFH Capacity:** 3-4 beds (3 bedrooms + den/office option, verified through detailed analysis)  
 **Compliance Score:** 75% - Good foundation, needs modifications  
-**Status:** Available for lease with flexible conversion options
+**Status:** Available for lease with flexible conversion options  
+**Special Features:** Vaulted ceilings, skylights, territorial view, hot tub/spa, cul-de-sac location, partially fenced
 
 ---
 
