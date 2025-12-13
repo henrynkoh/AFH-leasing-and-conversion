@@ -15,7 +15,7 @@ export default function Home() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveFeature((prev) => (prev + 1) % 6);
+      setActiveFeature((prev) => (prev + 1) % 7);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -55,6 +55,13 @@ export default function Home() {
       description: 'Comprehensive resources and screening tools',
       color: 'from-indigo-500 to-purple-500',
       link: '/providers'
+    },
+    {
+      icon: '📋',
+      title: 'Execution Plan',
+      description: 'Detailed step-by-step execution plan with daily tasks',
+      color: 'from-orange-500 to-red-500',
+      link: '/execution-plan'
     },
     {
       icon: '📊',
@@ -263,7 +270,7 @@ export default function Home() {
             <p className="text-xl text-blue-200">Navigate to any section to begin</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-4 max-w-7xl mx-auto">
             <Link href="/scenarios" className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transform hover:scale-105 transition-all">
               <div className="text-3xl mb-2">🎯</div>
               <div className="text-white font-semibold text-sm">Scenarios</div>
@@ -283,6 +290,11 @@ export default function Home() {
             <Link href="/providers" className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transform hover:scale-105 transition-all">
               <div className="text-3xl mb-2">🔍</div>
               <div className="text-white font-semibold text-sm">Providers</div>
+            </Link>
+            <Link href="/execution-plan" className="bg-gradient-to-br from-orange-500/20 to-red-500/20 backdrop-blur-lg rounded-xl p-6 text-center border-2 border-orange-400/30 hover:bg-orange-500/30 transform hover:scale-105 transition-all">
+              <div className="text-3xl mb-2">📋</div>
+              <div className="text-white font-semibold text-sm">실행방안</div>
+              <div className="text-white/80 text-xs mt-1">Execution Plan</div>
             </Link>
             <Link href="/" className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transform hover:scale-105 transition-all">
               <div className="text-3xl mb-2">📊</div>
