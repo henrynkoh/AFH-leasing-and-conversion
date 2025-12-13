@@ -868,32 +868,32 @@ export default function ExecutionPlanPage() {
         <p className="text-gray-600 mb-8">Scenario 2: Conversion Option 1 - 5 Beds + Caregiver Room</p>
 
         {/* Basic Plan */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-          <h2 className="text-2xl font-bold mb-4">Basic Plan (기본 계획)</h2>
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-8 border-2 border-red-300">
+          <h2 className="text-2xl font-bold mb-4 text-red-700">Basic Plan (기본 계획)</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <div className="text-sm text-gray-600">Project Name</div>
-              <div className="font-semibold text-lg">{basicPlan.projectName}</div>
+            <div className="bg-red-50 p-4 rounded-lg border border-red-200">
+              <div className="text-sm font-bold text-red-700 mb-1">Project Name</div>
+              <div className="font-bold text-lg text-red-900">{basicPlan.projectName}</div>
             </div>
-            <div>
-              <div className="text-sm text-gray-600">Target Capacity</div>
-              <div className="font-semibold text-lg">{basicPlan.targetCapacity}</div>
+            <div className="bg-red-50 p-4 rounded-lg border border-red-200">
+              <div className="text-sm font-bold text-red-700 mb-1">Target Capacity</div>
+              <div className="font-bold text-lg text-red-900">{basicPlan.targetCapacity}</div>
             </div>
-            <div>
-              <div className="text-sm text-gray-600">Total Timeline</div>
-              <div className="font-semibold text-lg">{basicPlan.totalTimeline}</div>
+            <div className="bg-red-50 p-4 rounded-lg border border-red-200">
+              <div className="text-sm font-bold text-red-700 mb-1">Total Timeline</div>
+              <div className="font-bold text-lg text-red-900">{basicPlan.totalTimeline}</div>
             </div>
-            <div>
-              <div className="text-sm text-gray-600">Total Budget</div>
-              <div className="font-semibold text-lg">{basicPlan.totalBudget}</div>
+            <div className="bg-red-50 p-4 rounded-lg border border-red-200">
+              <div className="text-sm font-bold text-red-700 mb-1">Total Budget</div>
+              <div className="font-bold text-lg text-red-900">{basicPlan.totalBudget}</div>
             </div>
-            <div>
-              <div className="text-sm text-gray-600">Location</div>
-              <div className="font-semibold">{basicPlan.location}</div>
+            <div className="bg-red-50 p-4 rounded-lg border border-red-200">
+              <div className="text-sm font-bold text-red-700 mb-1">Location</div>
+              <div className="font-bold text-red-900">{basicPlan.location}</div>
             </div>
-            <div>
-              <div className="text-sm text-gray-600">Jurisdiction</div>
-              <div className="font-semibold">{basicPlan.jurisdiction}</div>
+            <div className="bg-red-50 p-4 rounded-lg border border-red-200">
+              <div className="text-sm font-bold text-red-700 mb-1">Jurisdiction</div>
+              <div className="font-bold text-red-900">{basicPlan.jurisdiction}</div>
             </div>
           </div>
         </div>
